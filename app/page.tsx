@@ -28,7 +28,7 @@ export default function Home() {
         </Container>
         {/* md:w-[936px] */}
         <Container size="4" className="col-span-6 border-r-4 ">
-          <div className="flex justify-end">
+          <div className="flex justify-end mr-6">
             <MainPage />
           </div>
         </Container>

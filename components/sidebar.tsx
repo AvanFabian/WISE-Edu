@@ -1,7 +1,7 @@
 'use client'
 import { useState } from "react";
 import { Container, Flex } from "@radix-ui/themes";
-import WISEDU_white from "@/public/assets/logo_text/WISEEDU_blue.svg";
+import WISEDU_V2 from "@/public/assets/logo_text/WISEEDU-V2.svg";
 import Image from "next/image";
 import { belajar, history, lecturer, mission, akunkamu, others } from "@/public/assets/side_icons"; 
 
@@ -26,7 +26,7 @@ const sidebar = () => {
     <Container className="bg-[#fafafa] pt-8 min-h-screen border-r-[3px] w-full border-[#4b4b4b2d]">
       <Flex direction="column" gap="3" justify="center" className="w-full pl-4 pr-4">
           <Image 
-            src={WISEDU_white}
+            src={WISEDU_V2}
             width={270}
             height={55}
             className="mt-2 mb-5 mx-auto"
