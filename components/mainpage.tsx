@@ -4,7 +4,7 @@ import { Grid, Container, Flex, Box, Section } from "@radix-ui/themes";
 import panduan from "@/public/assets/panduan.png";
 const mainpage = () => {
   return (
-    <div className="flex w-3/4 bg-slate-200 justify-end">
+    <div className="flex w-[82.5%] bg-slate-200 justify-end">
       <div className="w-full bg-[#58CC02] mt-6 py-7 px-4 rounded-2xl">
         <Grid columns="2" gap="5" width="auto">
           <div className="flex flex-col align-middle my-auto">
