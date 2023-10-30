@@ -18,7 +18,7 @@ export default function RootLayout({
     // hydration pass
     <html lang="en" className="scroll-smooth" suppressHydrationWarning>
       <Theme>
-        <body className=''>{children}</body>
+        <body className='h-screen'>{children}</body>
       </Theme>
     </html>
   );

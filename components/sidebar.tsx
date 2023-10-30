@@ -19,6 +19,7 @@ const sidebar = () => {
   const [activeButton, setActiveButton] = useState(null);
 
   const handleButtonClick = (index:any) => {
+    console.log(index);
     setActiveButton(index);
   };
 
@@ -35,10 +36,8 @@ const sidebar = () => {
         {sidebarItems.map((item, index) => (
           <button 
             key={index}
-            // className="flex hover:bg-[#77f0a983] border-4 border-[#fafafa] hover:border-[#51d36d] px-5 bg-[#ffffff9b] 
-            // transition-all py-3 mt-2 gap-4 items-center rounded-2xl text-white"
-            className={`flex border-4 border-[#fafafa] px-5 bg-[#ffffff9b] transition-all py-3 mt-2 gap-4 w-full items-center rounded-2xl text-white ${
-              activeButton === index ? 'bg-[#77f0a983] border-[#51d36d]' : 'hover:bg-[#77f0a983] hover:border-[#51d36d]'
+            className={`flex border-4 border-[#fafafa] px-5 bg-[#ffffff9b] transition-all py-3 mt-2 gap-4 w-full items-center rounded-2xl text-white 
+            ${ activeButton === index ? 'bg-[#54f19683] border-[#51d36d]' : 'hover:bg-[#cccccc9b]'
             }`}
             onClick={() => handleButtonClick(index)}
           >
