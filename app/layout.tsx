@@ -1,8 +1,13 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
-import '@radix-ui/themes/styles.css';
-import { Theme } from "@radix-ui/themes";
+import dynamic from "next/dynamic";
+import "@radix-ui/themes/styles.css";
+import { Theme, Container, Grid } from "@radix-ui/themes";
+const SideBar = dynamic(() => import("@/components/sidebar"), { ssr: false });
+const RightPage = dynamic(() => import("@/components/rightpage"), {
+  ssr: false,
+});
 
 export const metadata: Metadata = {
   title: "WISE Edu",
@@ -18,7 +23,21 @@ export default function RootLayout({
     // hydration pass
     <html lang="en" className="scroll-smooth" suppressHydrationWarning>
       <Theme>
-        <body className='h-screen'>{children}</body>
+        <body className="h-screen">
+          <div className="grid grid-cols-12 h-screen">
+            {/* lg:w-[385px] */}
+            <Container size="4" className="col-span-2 ">
+              <SideBar />
+            </Container>
+            {/* md:w-[936px] */}
+            <Container size="4" className="col-span-6 border-r-4 bg-[#F5ECD7]">
+                {children}
+            </Container>
+            <Container size="2" className="col-span-4 bg-[#F5ECD7]">
+              <RightPage />
+            </Container>
+          </div>
+        </body>
       </Theme>
     </html>
   );

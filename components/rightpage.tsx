@@ -41,7 +41,7 @@ const rightpage = () => {
         </Flex>
       </div>
       <div className="flex w-full mt-8 ml-3">
-        <div className="flex relative flex-col w-full h-max bg-transparent border-[3px] border-[#61616162] rounded-2xl">
+        <div className="flex relative flex-col w-full h-max bg-[#ebe2cd] border-[3px] border-[#c4bfbf62] rounded-2xl">
           <div className="ml-2 mt-2 pl-4 pr-8 py-3">
             <h2 className="text-[#414040] text-xl font-bold subpixel-antialiased capitalize">
               Ayo Berkompetisi dengan Siswa Lain!
@@ -60,7 +60,7 @@ const rightpage = () => {
               </span>
             </div>
             <div className="flex justify-center">
-              <button className="flex mt-6 bg-[#3C4DFF] justify-center rounded-2xl border-b-4 border-[#020202] shadow-2xl w-full py-3">
+              <button className="flex transition-all mt-6 bg-[#8B6B61] hover:bg-[#d6aa9d] justify-center rounded-2xl border-b-4 border-[#020202] shadow-2xl w-full py-3">
                 <span className="text-lg font-bold text-white uppercase">
                   Ikuti Kompetisi
                 </span>

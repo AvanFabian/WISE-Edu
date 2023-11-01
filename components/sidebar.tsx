@@ -19,13 +19,12 @@ const sidebar = () => {
   const [activeButton, setActiveButton] = useState(null);
 
   const handleButtonClick = (index:any) => {
-    console.log(index);
     setActiveButton(index);
   };
 
   return (
-    <Container className="bg-[#fafafa] pt-8 min-h-screen border-r-[3px] w-full border-[#4b4b4b2d]">
-      <Flex direction="column" gap="3" justify="center" className="w-full pl-4 pr-4">
+    <Container className="bg-[#F5ECD7] pt-8 min-h-screen w-full">
+      <Flex direction="column" gap="3" justify="center" className="w-full pl-4 pr-4 pb-[263px] mt-4 border-r-2 border-[#4D4D4D]">
           <Image 
             src={WISEDU_V2}
             width={270}
@@ -36,8 +35,8 @@ const sidebar = () => {
         {sidebarItems.map((item, index) => (
           <button 
             key={index}
-            className={`flex border-4 border-[#fafafa] px-5 bg-[#ffffff9b] transition-all py-3 mt-2 gap-4 w-full items-center rounded-2xl text-white 
-            ${ activeButton === index ? 'bg-[#54f19683] border-[#51d36d]' : 'hover:bg-[#cccccc9b]'
+            className={`flex border-4 border-[#F5ECD7] px-5 bg-[#F5ECD7] transition-all py-3 mt-2 gap-4 w-full items-center rounded-2xl text-[#4D4D4D] 
+            ${ activeButton === index ? 'bg-[#54f19683] border-[#51d36d]' : 'hover:bg-[#ebe5d3]'
             }`}
             onClick={() => handleButtonClick(index)}
           >
