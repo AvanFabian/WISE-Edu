@@ -2,9 +2,10 @@ import React from "react";
 import Image from "next/image";
 import { Grid, Container, Flex, Box, Section } from "@radix-ui/themes";
 import panduan from "@/public/assets/panduan.png";
+import { bintang_level, gembok_level } from "@/public/assets/mainpage_icons";
 const mainpage = () => {
   return (
-    <div className="flex flex-col w-[82.5%] bg-slate-200 justify-end">
+    <div className="flex flex-col w-[81%] bg-slate-200 justify-end mr-8">
       <div className="w-full bg-gradient-to-l from-[#bc998e] to-[#8B6B61] mt-6 py-6 px-4 rounded-2xl">
         <Grid columns="2" gap="2" width="auto">
           <div className="flex flex-col align-middle my-auto">
@@ -27,34 +28,64 @@ const mainpage = () => {
       </div>
       <div className="flex flex-col mt-16 gap-32">
         <div className="flex flex-row">
-        <button className="flex transition-all rounded-full m-auto w-max py-8 px-10 h-max bg-[#e49937]">
-          1
-        </button>
-        <button className="flex transition-all rounded-full m-auto w-max py-8 px-10 h-max bg-[#e49937]">
-          1
-        </button>
-        <button className="flex transition-all rounded-full m-auto w-max py-8 px-10 h-max bg-[#e49937]">
-          1
-        </button>
+          <div className="m-auto flex flex-col">
+            <button className="absolute flex z-20 hover:translate-y-[12px] transition-all rounded-full m-auto w-max py-4 px-5 h-max bg-[#8B6B61]">
+              <Image
+                src={bintang_level}
+                width={60}
+                height={32}
+                alt="WISE Edu Logo"
+              />
+            </button>
+            <button className="z-10 mt-2 flex transition-all rounded-full w-max py-4 px-5 h-max bg-[#b98879]">
+              <Image
+                src={bintang_level}
+                width={60}
+                height={32}
+                alt="WISE Edu Logo"
+              />
+            </button>
+          </div>
+          <div className="m-auto flex flex-col">
+            <button className="absolute flex z-20 hover:translate-y-[12px] transition-all rounded-full m-auto w-max py-4 px-5 h-max bg-[#796565]">
+              <Image
+                src={gembok_level}
+                width={60}
+                height={32}
+                alt="WISE Edu Logo"
+              />
+            </button>
+            <button className="z-10 mt-2 flex transition-all rounded-full w-max py-4 px-5 h-max bg-[#4d3c37]">
+              <Image
+                src={gembok_level}
+                width={60}
+                height={32}
+                alt="WISE Edu Logo"
+              />
+            </button>
+          </div>
+          <button className="flex transition-all rounded-full m-auto w-max py-8 px-10 h-max bg-[#e49937]">
+            1
+          </button>
         </div>
         <div className="flex flex-row">
-        <button className="flex transition-all rounded-full m-auto w-max py-8 px-10 h-max bg-[#e49937]">
-          1
-        </button>
-        <button className="flex transition-all rounded-full m-auto w-max py-8 px-10 h-max bg-[#e49937]">
-          1
-        </button>
+          <button className="flex transition-all rounded-full m-auto w-max py-8 px-10 h-max bg-[#e49937]">
+            1
+          </button>
+          <button className="flex transition-all rounded-full m-auto w-max py-8 px-10 h-max bg-[#e49937]">
+            1
+          </button>
         </div>
         <div className="flex flex-row">
-        <button className="flex transition-all rounded-full m-auto w-max py-8 px-10 h-max bg-[#e49937]">
-          1
-        </button>
-        <button className="flex transition-all rounded-full m-auto w-max py-8 px-10 h-max bg-[#e49937]">
-          1
-        </button>
-        <button className="flex transition-all rounded-full m-auto w-max py-8 px-10 h-max bg-[#e49937]">
-          1
-        </button>
+          <button className="flex transition-all rounded-full m-auto w-max py-8 px-10 h-max bg-[#e49937]">
+            1
+          </button>
+          <button className="flex transition-all rounded-full m-auto w-max py-8 px-10 h-max bg-[#e49937]">
+            1
+          </button>
+          <button className="flex transition-all rounded-full m-auto w-max py-8 px-10 h-max bg-[#e49937]">
+            1
+          </button>
         </div>
       </div>
       {/* <Grid columns="3" className="mt-16">

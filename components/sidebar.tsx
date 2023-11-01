@@ -1,7 +1,7 @@
 'use client'
 import { useState } from "react";
 import { Container, Flex } from "@radix-ui/themes";
-import WISEDU_V2 from "@/public/assets/logo_text/WISEEDU-V2.svg";
+import WISEDU_V2 from "@/public/assets/logo_text/WISEEDU-V3.svg";
 import Image from "next/image";
 import { belajar, history, lecturer, mission, akunkamu, others } from "@/public/assets/side_icons"; 
 
@@ -49,16 +49,6 @@ const sidebar = () => {
             <span className="font-bold text-[26px] text-[#777777] ">{item.text}</span>
           </button>
         ))}
-        {/* <button className="flex hover:bg-[#77f0a983] border-4 border-[#fafafa] hover:border-[#51d36d] px-5 bg-[#ffffff9b] transition-all py-3 mt-2 gap-4 items-center rounded-2xl text-white">
-          <BookmarkIcon width="32" height="32" color="black"/>
-          <Image 
-            src={belajar}
-            width={55}
-            height={32}
-            alt="WISE Edu Logo"
-          />
-          <span className="font-bold text-[24px] text-[#777777] ">LAINNYA</span>
-        </button> */}
       </Flex>
     </Container>
   );

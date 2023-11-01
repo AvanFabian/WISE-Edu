@@ -9,4 +9,5 @@ import achievement from './achievement.png';
 import performabelajar from './performabelajar.png';
 import kompetisi_trophy from './kompetisi_trophy.png';
 
-export {mathlecture, fisikalecture, kimialecture, biologilecture, kesenianlecture, kebudayaanlecture, calendar, achievement, performabelajar, kompetisi_trophy};
+export {mathlecture, fisikalecture, kimialecture, biologilecture, kesenianlecture, kebudayaanlecture, 
+        calendar, achievement, performabelajar, kompetisi_trophy};
