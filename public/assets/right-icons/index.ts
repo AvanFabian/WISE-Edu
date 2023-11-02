@@ -8,6 +8,7 @@ import calendar from './calendar.png';
 import achievement from './achievement.png';
 import performabelajar from './performabelajar.png';
 import kompetisi_trophy from './kompetisi_trophy.png';
+import panah_ikut_kompetisi from './panah_ikut_kompetisi.png';
 
 export {mathlecture, fisikalecture, kimialecture, biologilecture, kesenianlecture, kebudayaanlecture, 
-        calendar, achievement, performabelajar, kompetisi_trophy};
+        calendar, achievement, performabelajar, kompetisi_trophy, panah_ikut_kompetisi};

@@ -1,8 +1,12 @@
+'use client'
 import React from 'react'
+import DialogDemo from '@/components/dialog'
 
 const page = () => {
   return (
-    <div>page</div>
+    <div>
+      <DialogDemo />
+    </div>
   )
 }
 

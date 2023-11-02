@@ -23,8 +23,8 @@ export default function RootLayout({
     // hydration pass
     <html lang="en" className="scroll-smooth" suppressHydrationWarning>
       <Theme>
-        <body className="h-screen">
-          <div className="grid grid-cols-12 h-screen">
+        <body className="min-h-vh">
+          <div className="grid grid-cols-12 min-h-vh">
             {/* lg:w-[385px] */}
             <Container size="4" className="col-span-2 ">
               <SideBar />

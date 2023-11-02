@@ -7,8 +7,8 @@ import {
   achievement,
   performabelajar,
   kompetisi_trophy,
+  panah_ikut_kompetisi,
 } from "@/public/assets/right-icons";
-import panduan from "@/public/assets/panduan.png";
 
 const rightpage = () => {
   return (
@@ -40,7 +40,7 @@ const rightpage = () => {
           <span className="font-bold text-[#31a13b]">Good</span>
         </Flex>
       </div>
-      <div className="flex w-full mt-8 ml-3">
+      <div className="flex flex-col w-full mt-8 ml-3">
         <div className="flex relative flex-col w-full h-max bg-[#ebe2cd] border-[3px] border-[#c4bfbf62] rounded-2xl">
           <div className="ml-2 mt-2 pl-4 pr-8 py-3">
             <h2 className="text-[#414040] text-xl font-bold subpixel-antialiased capitalize">
@@ -48,7 +48,7 @@ const rightpage = () => {
             </h2>
             <div className="grid grid-cols-6 gap-6 mt-8 w-full">
               <Image
-                src={kompetisi_trophy}
+                src={panah_ikut_kompetisi}
                 width={150}
                 height={55}
                 alt="WISE Edu Logo"
@@ -65,6 +65,31 @@ const rightpage = () => {
                   Ikuti Kompetisi
                 </span>
               </button>
+            </div>
+          </div>
+        </div>
+        <div className="flex relative flex-col w-full h-max mt-8 bg-[#ebe2cd] border-[3px] border-[#c4bfbf62] rounded-2xl">
+          <div className="ml-2 mt-2 pl-4 pr-8 py-3">
+            <div className="flex flex-row ">
+              <h2 className="text-[#414040] text-xl mr-auto font-bold subpixel-antialiased capitalize">
+                Pantau Skor Terbaikmu
+              </h2>
+              <h2 className="text-[#0c0c0c] cursor-pointer text-xl font-extrabold subpixel-antialiased uppercase">
+                Lihat
+              </h2>
+            </div>
+            <div className="grid grid-cols-6 gap-6 mt-8 w-full">
+              <Image
+                src={kompetisi_trophy}
+                width={150}
+                height={55}
+                alt="WISE Edu Logo"
+                className="ml-3 cursor-pointer col-span-2"
+              />
+              <span className="text-lg font-normal col-span-4">
+                Bandingkan skormu dengan siswa lainnya dan Terus kembangkan
+                dirimu
+              </span>
             </div>
           </div>
         </div>

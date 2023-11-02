@@ -5,7 +5,7 @@ import panduan from "@/public/assets/panduan.png";
 import { bintang_level, gembok_level } from "@/public/assets/mainpage_icons";
 const mainpage = () => {
   return (
-    <div className="flex flex-col w-[81%] bg-slate-200 justify-end mr-8">
+    <div className="flex flex-col w-[820px] bg-slate-200 justify-end mr-8">
       <div className="w-full bg-gradient-to-l from-[#bc998e] to-[#8B6B61] mt-6 py-6 px-4 rounded-2xl">
         <Grid columns="2" gap="2" width="auto">
           <div className="flex flex-col align-middle my-auto">
