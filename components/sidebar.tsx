@@ -23,34 +23,35 @@ const sidebar = () => {
   };
 
   return (
-    <Container className="bg-[#F5ECD7] pt-8 min-h-screen w-full">
-      <Flex direction="column" gap="3" justify="center" className="w-full pl-4 pr-4 pb-[263px] mt-4 border-r-2 border-[#4D4D4D]">
+    <div className="w-full min-h-screen pt-8 ">
+      <Flex direction="column" gap="3" justify="center" className=" w-full px-2">
           <Image 
             src={WISEDU_V2}
-            width={270}
+            width={190}
             height={55}
-            className="mt-2 mb-5 mx-auto"
+            className="mb-7 lg:mb-5 hidden lg:block mx-auto"
             alt="WISE Edu Logo"
           />
         {sidebarItems.map((item, index) => (
           <button 
             key={index}
-            className={`flex border-4 border-[#F5ECD7] px-5 bg-[#F5ECD7] transition-all py-3 mt-2 gap-4 w-full items-center rounded-2xl text-[#4D4D4D] 
-            ${ activeButton === index ? 'bg-[#54f19683] border-[#51d36d]' : 'hover:bg-[#ebe5d3]'
-            }`}
+            className={`sm:w-[75%] sm:mx-auto lg:w-full flex border-4 border-[#F5ECD7] px-5 bg-[#F5ECD7] transition-all 
+            py-2 mb-1 gap-1 items-center rounded-2xl text-[#4D4D4D] ${ activeButton === index ? 'bg-[#54f19683] border-[#51d36d]' 
+            : 'hover:bg-[#ebe5d3]'} `}
             onClick={() => handleButtonClick(index)}
           >
             <Image 
               src={item.icon}
-              width={50}
+              width={32}
               height={45}
               alt="WISE Edu Logo"
+              className="sm:w-[28px] lg:w-[32px]"
             />
-            <span className="font-bold text-[26px] text-[#777777] ">{item.text}</span>
+            <span className="font-bold text-[17px] text-[#777777] lg:ml-3 hidden lg:block">{item.text}</span>
           </button>
         ))}
       </Flex>
-    </Container>
+    </div>
   );
 };
 

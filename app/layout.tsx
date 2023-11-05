@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import Head from "next/head";
 import "./globals.css";
 import dynamic from "next/dynamic";
 import "@radix-ui/themes/styles.css";
@@ -23,19 +23,22 @@ export default function RootLayout({
     // hydration pass
     <html lang="en" className="scroll-smooth" suppressHydrationWarning>
       <Theme>
-        <body className="min-h-vh">
-          <div className="grid grid-cols-12 min-h-vh">
+        <body className="overflow-y-auto overflow-x-hidden max-w-screen max-h-screen">
+          <div className="grid grid-cols-12 min-h-screen">
             {/* lg:w-[385px] */}
-            <Container size="4" className="col-span-2 ">
+            <div className="col-span-2 bg-[#F5ECD7] fixed min-h-screen">
               <SideBar />
-            </Container>
-            {/* md:w-[936px] */}
-            <Container size="4" className="col-span-6 border-r-4 bg-[#F5ECD7]">
-                {children}
-            </Container>
-            <Container size="2" className="col-span-4 bg-[#F5ECD7]">
-              <RightPage />
-            </Container>
+            </div>
+
+            {/* <!-- Faux Sidebar Space --> */}
+            <div className="col-span-2 bg-[#F5ECD7] border-r-[1px] border-[#5e5e5e] min-h-screen"></div>
+
+            <div className="col-span-6 bg-[#F5ECD7] min-h-screen">
+              {children}
+            </div>
+            <div className="col-span-4 bg-[#F5ECD7] max-w-screen min-h-screen">
+              <RightPage /> 
+            </div>
           </div>
         </body>
       </Theme>
