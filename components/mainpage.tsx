@@ -2,7 +2,12 @@ import React from "react";
 import Image from "next/image";
 // import { Grid, Container, Flex, Box, Section } from "@radix-ui/themes";
 import panduan from "@/public/assets/panduan.png";
-import { bintang_level, gembok_level } from "@/public/assets/mainpage_icons";
+import {
+  bintang_level,
+  gembok_level,
+  bubblechat_mulai,
+} from "@/public/assets/mainpage_icons";
+
 const mainpage = () => {
   return (
     <div className="flex flex-col min-h-screen lg:max-w-[600px] align-top mr-6">
@@ -26,7 +31,72 @@ const mainpage = () => {
           </div>
         </div>
       </div>
-      <div className="flex flex-col mt-16 gap-28">
+      <div className="flex flex-col mt-16 mb-4 gap-28">
+        <div className="flex flex-row">
+          <Image
+            src={bubblechat_mulai}
+            width={109}
+            height={32}
+            alt="WISE Edu Logo"
+            className="absolute left-[425px] top-[205px] z-30 animate-bounce"
+          />
+          <div className="m-auto flex flex-col">
+            <button className="absolute flex z-20 hover:translate-y-[12px] transition-all rounded-full m-auto w-max py-3 px-4 h-max bg-[#8B6B61]">
+              <div className="">
+                <Image
+                  src={bintang_level}
+                  width={35}
+                  height={32}
+                  alt="WISE Edu Logo"
+                />
+              </div>
+            </button>
+            <button className="z-10 mt-2 flex transition-all rounded-full w-max py-3 px-4 h-max bg-[#b98879]">
+              <Image
+                src={bintang_level}
+                width={35}
+                height={32}
+                alt="WISE Edu Logo"
+              />
+            </button>
+          </div>
+          <div className="m-auto flex flex-col">
+            <button className="absolute flex z-20 hover:translate-y-[12px] transition-all rounded-full m-auto w-max py-3 px-4 h-max bg-[#796565]">
+              <Image
+                src={gembok_level}
+                width={35}
+                height={32}
+                alt="WISE Edu Logo"
+              />
+            </button>
+            <button className="z-10 mt-2 flex transition-all rounded-full w-max py-3 px-4 h-max bg-[#4d3c37]">
+              <Image
+                src={gembok_level}
+                width={35}
+                height={32}
+                alt="WISE Edu Logo"
+              />
+            </button>
+          </div>
+          <div className="m-auto flex flex-col">
+            <button className="absolute flex z-20 hover:translate-y-[12px] transition-all rounded-full m-auto w-max py-3 px-4 h-max bg-[#796565]">
+              <Image
+                src={gembok_level}
+                width={35}
+                height={32}
+                alt="WISE Edu Logo"
+              />
+            </button>
+            <button className="z-10 mt-2 flex transition-all rounded-full w-max py-3 px-4 h-max bg-[#4d3c37]">
+              <Image
+                src={gembok_level}
+                width={35}
+                height={32}
+                alt="WISE Edu Logo"
+              />
+            </button>
+          </div>
+        </div>
         <div className="flex flex-row">
           <div className="m-auto flex flex-col">
             <button className="absolute flex z-20 hover:translate-y-[12px] transition-all rounded-full m-auto w-max py-3 px-4 h-max bg-[#8B6B61]">
@@ -96,6 +166,24 @@ const mainpage = () => {
             <button className="z-10 mt-2 flex transition-all rounded-full w-max py-3 px-4 h-max bg-[#b98879]">
               <Image
                 src={bintang_level}
+                width={35}
+                height={32}
+                alt="WISE Edu Logo"
+              />
+            </button>
+          </div>
+          <div className="m-auto flex flex-col">
+            <button className="absolute flex z-20 hover:translate-y-[12px] transition-all rounded-full m-auto w-max py-3 px-4 h-max bg-[#796565]">
+              <Image
+                src={gembok_level}
+                width={35}
+                height={32}
+                alt="WISE Edu Logo"
+              />
+            </button>
+            <button className="z-10 mt-2 flex transition-all rounded-full w-max py-3 px-4 h-max bg-[#4d3c37]">
+              <Image
+                src={gembok_level}
                 width={35}
                 height={32}
                 alt="WISE Edu Logo"
@@ -122,57 +210,6 @@ const mainpage = () => {
           </div>
         </div>
       </div>
-      {/* <Grid columns="3" className="mt-16">
-        <div className="justify-self-center">
-        <button className="flex transition-all rounded-full w-max py-7 px-10 h-max bg-[#2b77b4]">
-            1
-        </button>
-        </div>
-        <div className="justify-self-center">
-        <button className="flex transition-all rounded-full w-max py-7 px-10 h-max bg-[#d6aa9d]">
-            2
-        </button>
-        </div>
-        <div className="justify-self-center">
-        <button className="flex transition-all rounded-full w-max py-7 px-10 h-max bg-[#d6aa9d]">
-            3
-        </button>
-        </div>
-      </Grid>
-      <Grid columns="3" className="mt-24">
-        <div className="justify-self-center">
-        <button className="flex transition-all rounded-full w-max py-7 px-10 h-max bg-[#d6aa9d]">
-            1
-        </button>
-        </div>
-        <div className="justify-self-center">
-        <button className="flex transition-all rounded-full w-max py-7 px-10 h-max bg-[#d6aa9d]">
-            2
-        </button>
-        </div>
-        <div className="justify-self-center">
-        <button className="flex transition-all rounded-full w-max py-7 px-10 h-max bg-[#d6aa9d]">
-            3
-        </button>
-        </div>
-      </Grid>
-      <Grid columns="3" className="mt-24">
-        <div className="justify-self-center">
-        <button className="flex transition-all rounded-full w-max py-7 px-10 h-max bg-[#d6aa9d]">
-            1
-        </button>
-        </div>
-        <div className="justify-self-center">
-        <button className="flex transition-all rounded-full w-max py-7 px-10 h-max bg-[#d6aa9d]">
-            2
-        </button>
-        </div>
-        <div className="justify-self-center">
-        <button className="flex transition-all rounded-full w-max py-7 px-10 h-max bg-[#d6aa9d]">
-            3
-        </button>
-        </div>
-      </Grid> */}
     </div>
   );
 };

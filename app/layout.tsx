@@ -1,9 +1,8 @@
 import type { Metadata } from "next";
-import Head from "next/head";
 import "./globals.css";
 import dynamic from "next/dynamic";
 import "@radix-ui/themes/styles.css";
-import { Theme, Container, Grid } from "@radix-ui/themes";
+import { Theme } from "@radix-ui/themes";
 const SideBar = dynamic(() => import("@/components/sidebar"), { ssr: false });
 const RightPage = dynamic(() => import("@/components/rightpage"), {
   ssr: false,
@@ -25,7 +24,6 @@ export default function RootLayout({
       <Theme>
         <body className="overflow-y-auto overflow-x-hidden max-w-screen max-h-screen">
           <div className="grid grid-cols-12 min-h-screen">
-            {/* lg:w-[385px] */}
             <div className="col-span-2 bg-[#F5ECD7] fixed min-h-screen">
               <SideBar />
             </div>
@@ -36,7 +34,11 @@ export default function RootLayout({
             <div className="col-span-6 bg-[#F5ECD7] min-h-screen">
               {children}
             </div>
-            <div className="col-span-4 bg-[#F5ECD7] max-w-screen min-h-screen">
+
+            {/* <!-- Faux Sidebar Space --> */}
+            <div className="col-span-4 bg-[#F5ECD7] min-h-screen"></div>
+
+            <div className="fixed right-[60px] bg-[#F5ECD7] max-w-screen min-h-screen">
               <RightPage /> 
             </div>
           </div>

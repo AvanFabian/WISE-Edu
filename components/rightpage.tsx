@@ -1,3 +1,4 @@
+'use client'
 import React from "react";
 import Image from "next/image";
 import { Grid, Container, Flex, Button, Section } from "@radix-ui/themes";
@@ -9,8 +10,11 @@ import {
   kompetisi_trophy,
   panah_ikut_kompetisi,
 } from "@/public/assets/right-icons";
+import { usePathname } from 'next/navigation';
 
 const rightpage = () => {
+  const pathname = usePathname()
+
   return (
     <div className="flex flex-col max-w-[390px]">
       <div className="flex flex-row gap-8 mt-7 ml-5">
@@ -74,7 +78,7 @@ const rightpage = () => {
               <h2 className="text-[#414040] text-sm mr-auto font-bold subpixel-antialiased capitalize">
                 Pantau Skor <br />Terbaikmu
               </h2>
-              <h2 className="text-[#0c0c0c] cursor-pointer text-sm font-extrabold subpixel-antialiased uppercase">
+              <h2 className="text-[#414040] cursor-pointer text-sm font-extrabold subpixel-antialiased uppercase">
                 Lihat
               </h2>
             </div>
