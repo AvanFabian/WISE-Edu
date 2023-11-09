@@ -1,6 +1,5 @@
 import React from "react";
 import Image from "next/image";
-// import { Grid, Container, Flex, Box, Section } from "@radix-ui/themes";
 import panduan from "@/public/assets/panduan.png";
 import {
   bintang_level,
@@ -157,7 +156,7 @@ const mainpage = () => {
           <div className="m-auto flex flex-col">
             <button className="absolute flex z-20 hover:translate-y-[12px] transition-all rounded-full m-auto w-max py-3 px-4 h-max bg-[#8B6B61]">
               <Image
-                src={bintang_level}
+                src={gembok_level}
                 width={35}
                 height={32}
                 alt="WISE Edu Logo"
@@ -165,7 +164,7 @@ const mainpage = () => {
             </button>
             <button className="z-10 mt-2 flex transition-all rounded-full w-max py-3 px-4 h-max bg-[#b98879]">
               <Image
-                src={bintang_level}
+                src={gembok_level}
                 width={35}
                 height={32}
                 alt="WISE Edu Logo"

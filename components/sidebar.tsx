@@ -1,5 +1,4 @@
 'use client'
-import { useState, useEffect } from "react";
 import { Flex } from "@radix-ui/themes";
 import WISEDU_V2 from "@/public/assets/logo_text/WISEEDU-V3.svg";
 import Image from "next/image";
@@ -34,11 +33,11 @@ const sidebar = () => {
         {sidebarItems.map((item, index) => (
           console.log(`pathname: ${pathname}`),
           console.log(`item.url: ${item.url}`),
-          <Link 
+          <button 
             key={index}
             className={`sm:w-[75%] sm:mx-auto lg:w-full flex border-4 border-[#F5ECD7] px-5 bg-[#F5ECD7] transition-all duration-600
             py-2 mb-1 gap-1 items-center rounded-2xl  ${pathname == item.url ? 'bg-[#be8756]' : 'bg-[#F5ECD7]'}`}
-            href={item.url}
+            onClick={() => router.push(item.url)}
           >
             <Image 
               src={item.icon}
@@ -50,7 +49,7 @@ const sidebar = () => {
             <span className={`font-bold text-[17px] ${pathname == item.url ? 'text-[#f2f2f2]' : 'text-[#777777]' }  lg:ml-3 hidden lg:block`}>
               {item.text}
             </span>
-          </Link>
+          </button>
         ))}
       </Flex>
     </div>
