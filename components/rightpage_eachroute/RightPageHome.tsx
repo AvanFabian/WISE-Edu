@@ -1,5 +1,6 @@
 import { useState,useRef } from 'react'
 import Image from "next/image";
+import dynamic from 'next/dynamic';
 import { Flex } from "@radix-ui/themes";
 import {
   biologilecture,
@@ -9,6 +10,14 @@ import {
   kompetisi_trophy,
   panah_ikut_kompetisi,
 } from "@/public/assets/right-icons";
+
+const HoveringCard = dynamic(() => import("./HoveringCard"), {
+  ssr: false,
+});
+
+const MapelImage = [
+  { icon: biologilecture, mapel: 'Biologi' },
+]
 
 const FooterText = [
   { text: 'Kebijakan Privasi' },
@@ -25,12 +34,7 @@ const Rightpage_papanskor = () => {
     <div className="sticky top-0 flex flex-col max-w-[390px] max-h-max">
       <div className="flex flex-row gap-8 mt-7 ml-5">
         <Flex direction="row" className="cursor-pointer m-auto">
-          <Image
-            src={biologilecture}
-            width={30}
-            height={35}
-            alt="WISE Edu Logo"
-          />
+          <HoveringCard mapel={MapelImage} />
         </Flex>
         <Flex direction="row" className="items-center m-auto">
           <Image src={calendar} width={30} height={35} alt="WISE Edu Logo" />
