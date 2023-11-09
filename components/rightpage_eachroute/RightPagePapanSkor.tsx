@@ -6,7 +6,7 @@ import {
 
 const rightpage_papanskor = () => {
   return (
-    <div className="flex flex-col max-w-[390px]">
+    <div className="sticky top-0 flex flex-col max-w-[390px]">
         <div className="flex relative flex-col w-full h-max mt-4 z-50 bg-[#ebe2cd] border-[3px] border-[#c4bfbf62] rounded-2xl">
           <div className="ml-1 mt-1 px-3 py-3">
             <div className="flex flex-col mr-1">

@@ -21,7 +21,6 @@ const rightpage = () => {
 
   // Check if the current route exists in the object, if not, use a default component
   const selectedComponent = routeComponents[pathname] || <Rightpage_Home />
-  console.log(`pathname: ${pathname}`)
 
   return (
     <>

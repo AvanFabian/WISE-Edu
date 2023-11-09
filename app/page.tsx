@@ -1,3 +1,4 @@
+'use client'
 // import Image from "next/image";
 import dynamic from "next/dynamic";
 
@@ -27,9 +28,9 @@ export default function Home() {
         </div>
 
         {/* <!-- Faux Sidebar Space --> */}
-        <div className="col-span-4 bg-[#F5ECD7] min-h-screen"></div>
+        {/* <div className="col-span-4 bg-[#F5ECD7] min-h-screen"></div> */}
 
-        <div className="fixed right-[60px] bg-[#F5ECD7] max-w-screen min-h-screen">
+        <div className="col-span-4 pl-8 right-[60px] bg-[#F5ECD7] max-w-screen min-h-screen">
           <RightPage />
         </div>
       </div>
