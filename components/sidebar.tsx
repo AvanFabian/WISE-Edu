@@ -1,6 +1,6 @@
 'use client'
 import { Flex } from "@radix-ui/themes";
-import WISEDU_V2 from "@/public/assets/logo_text/WISEEDU-V3.svg";
+import WISEDU_V2 from "@/public/assets/LogoText/WISEEDU-V3.svg";
 import Image from "next/image";
 import { useRouter, usePathname } from "next/navigation";
 import Link from "next/link";

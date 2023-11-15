@@ -68,7 +68,7 @@ const Rightpage_papanskor = () => {
               </span>
             </div>
             <div className="flex justify-center">
-              <button className="flex transition-all mt-6 bg-[#8B6B61] hover:bg-[#d6aa9d] justify-center rounded-xl border-b-4 border-[#020202] shadow-2xl w-full py-[12px]">
+              <button className="flex transition-all duration-150 mt-6 bg-[#8B6B61] hover:bg-[#d6aa9d] justify-center rounded-xl border-b-4 border-[#020202] shadow-2xl w-full py-[12px]">
                 <p className="text-[15px] font-bold text-white uppercase">
                   Ikuti Kompetisi
                 </p>

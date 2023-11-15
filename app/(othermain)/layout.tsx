@@ -19,12 +19,12 @@ export default function OtherMainLayout ({
           {/* <!-- Faux Sidebar Space --> */}
           <div className="col-span-2 bg-[#F5ECD7] border-r-[1px] border-[#5e5e5e] min-h-screen"></div>
 
-          <div className="col-span-7 bg-[#F5ECD7] min-h-screen">
+          <div className="col-span-6 bg-[#F5ECD7] min-h-screen">
             {children}
           </div>
 
           {/* <!-- Faux Sidebar Space --> */}
-          <div className="col-span-3 bg-[#F5ECD7] min-h-screen"></div>
+          <div className="col-span-4 bg-[#F5ECD7] min-h-screen"></div>
 
           <div className="fixed right-[60px] bg-[#F5ECD7] max-w-screen min-h-screen">
             <RightPage />

@@ -1,4 +1,3 @@
-import { Flex } from "@radix-ui/themes";
 import Image from "next/image";
 import {
   kompetisi_trophy,
