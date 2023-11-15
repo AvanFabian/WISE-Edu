@@ -1,6 +1,6 @@
-import { useState,useRef } from 'react'
+import { useState, useRef } from "react";
 import Image from "next/image";
-import dynamic from 'next/dynamic';
+import dynamic from "next/dynamic";
 import { Flex } from "@radix-ui/themes";
 import {
   biologilecture,
@@ -15,21 +15,15 @@ const HoveringCard = dynamic(() => import("./HoveringCard"), {
   ssr: false,
 });
 
-const MapelImage = [
-  { icon: biologilecture, mapel: 'Biologi' },
-]
+const MapelImage = [{ icon: biologilecture, mapel: "Biologi" }];
 
 const FooterText = [
-  { text: 'Kebijakan Privasi' },
-  { text: 'Syarat dan Ketentuan' },
-]
-const FooterText2 = [
-  { text: 'FAQ' },
-  { text: 'Hubungi Developer' },
-]
+  { text: "Kebijakan Privasi" },
+  { text: "Syarat dan Ketentuan" },
+];
+const FooterText2 = [{ text: "FAQ" }, { text: "Hubungi Developer" }];
 
 const Rightpage_papanskor = () => {
-  
   return (
     <div className="sticky top-0 flex flex-col max-w-[390px] max-h-max">
       <div className="flex flex-row gap-8 mt-7 ml-5">
@@ -86,7 +80,8 @@ const Rightpage_papanskor = () => {
           <div className="ml-1 mt-1 px-3 py-3">
             <div className="flex flex-row mr-1">
               <h2 className="text-[#414040] text-sm mr-auto font-bold subpixel-antialiased capitalize">
-                Pantau Skor <br />Terbaikmu
+                Pantau Skor <br />
+                Terbaikmu
               </h2>
               <h2 className="text-[#414040] cursor-pointer text-sm font-extrabold subpixel-antialiased uppercase">
                 Lihat
@@ -117,7 +112,7 @@ const Rightpage_papanskor = () => {
               {item.text}
             </span>
           ))}
-          </div>
+        </div>
         <div className="flex flex-row gap-4 justify-center mt-3 mb-6">
           {FooterText2.map((item, index) => (
             <span
@@ -127,10 +122,10 @@ const Rightpage_papanskor = () => {
               {item.text}
             </span>
           ))}
-          </div>
+        </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default Rightpage_papanskor
+export default Rightpage_papanskor;

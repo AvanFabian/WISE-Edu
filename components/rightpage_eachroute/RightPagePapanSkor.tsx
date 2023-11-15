@@ -4,6 +4,12 @@ import {
   kompetisi_trophy,
 } from "@/public/assets/right-icons";
 
+const FooterText = [
+  { text: "Kebijakan Privasi" },
+  { text: "Syarat dan Ketentuan" },
+];
+const FooterText2 = [{ text: "FAQ" }, { text: "Hubungi Developer" }];
+
 const rightpage_papanskor = () => {
   return (
     <div className="sticky top-0 flex flex-col max-w-[390px]">
@@ -31,6 +37,26 @@ const rightpage_papanskor = () => {
               />
             </div>
           </div>
+        </div>
+        <div className="flex flex-row gap-4 justify-center mt-8">
+          {FooterText.map((item, index) => (
+            <span
+              key={index}
+              className="text-[#5c5c5c] opacity-80 text-[13px] cursor-pointer font-bold subpixel-antialiased uppercase"
+            >
+              {item.text}
+            </span>
+          ))}
+        </div>
+        <div className="flex flex-row gap-4 justify-center mt-3 mb-6">
+          {FooterText2.map((item, index) => (
+            <span
+              key={index}
+              className="text-[#5c5c5c] opacity-80 text-[13px] cursor-pointer font-bold subpixel-antialiased uppercase"
+            >
+              {item.text}
+            </span>
+          ))}
         </div>
     </div>
   )

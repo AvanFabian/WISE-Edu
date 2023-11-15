@@ -4,14 +4,14 @@ import WISEDU_V2 from "@/public/assets/logo_text/WISEEDU-V3.svg";
 import Image from "next/image";
 import { useRouter, usePathname } from "next/navigation";
 import Link from "next/link";
-import { belajar, history, lecturer, mission, akunkamu, others } from "@/public/assets/side_icons"; 
+import { belajar, history, lecturer, mission, akunkamu, others, logout } from "@/public/assets/side_icons"; 
 import { kompetisi_trophy } from '@/public/assets/right-icons'
 
 const sidebarItems = [
   { text: "Belajar", icon: belajar, url: '/' },
   { text: "Papan Skor", icon: kompetisi_trophy, url: '/papan-skor' },
   { text: "Pengajar", icon: lecturer, url: '/daftar-pengajar' },
-  { text: "Misi", icon: mission, url: '/misi' },
+  { text: "Tantangan", icon: mission, url: '/tantangan' },
   { text: "Akun Kamu", icon: akunkamu, url: '/profile-akun' },
   { text: "Lainnya", icon: others, url: '/lainnya' },
 ];
@@ -51,6 +51,23 @@ const sidebar = () => {
             </span>
           </button>
         ))}
+      </Flex>
+      <Flex direction="column" className="w-full px-2 mt-12">
+      <button 
+            className={`sm:w-[75%] sm:mx-auto lg:w-full flex border-4 border-[#F5ECD7] px-5 bg-[#F5ECD7] transition-all duration-600
+            py-2 mb-1 gap-1 items-center rounded-2xl`}
+          >
+            <Image 
+              src={logout}
+              width={32}
+              height={45}
+              alt="WISE Edu Logo"
+              className="sm:w-[28px] lg:w-[32px]"
+            />
+            <span className={`font-bold text-[17px] lg:ml-3 hidden lg:block text-[#ec4d4d]`}>
+              Keluar Akun
+            </span>
+          </button>
       </Flex>
     </div>
   );
