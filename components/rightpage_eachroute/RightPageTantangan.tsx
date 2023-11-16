@@ -21,7 +21,7 @@ const FooterText = [
 ];
 const FooterText2 = [{ text: "FAQ" }, { text: "Hubungi Developer" }];
 
-const Rightpage_home = () => {
+const Rightpage_tantangan = () => {
   return (
     <div className="sticky top-0 flex flex-col max-w-[390px] max-h-max">
       <div className="flex flex-row gap-8 mt-7 ml-5">
@@ -74,32 +74,6 @@ const Rightpage_home = () => {
             </div>
           </div>
         </div>
-        <div className="flex relative flex-col w-full h-max mt-4 bg-[#ebe2cd] border-[3px] border-[#c4bfbf62] rounded-2xl">
-          <div className="ml-1 mt-1 px-3 py-3">
-            <div className="flex flex-row mr-1">
-              <h2 className="text-[#414040] text-sm mr-auto font-bold subpixel-antialiased capitalize">
-                Pantau Skor <br />
-                Terbaikmu
-              </h2>
-              <h2 className="text-[#414040] cursor-pointer text-sm font-extrabold subpixel-antialiased uppercase">
-                Lihat
-              </h2>
-            </div>
-            <div className="grid grid-cols-6 gap-6 mt-4 w-full">
-              <Image
-                src={kompetisi_trophy}
-                width={85}
-                height={55}
-                alt="WISE Edu Logo"
-                className="cursor-pointer col-span-2"
-              />
-              <p className="text-[16px] font-normal col-span-4">
-                Bandingkan skormu dengan siswa lainnya dan Terus kembangkan
-                dirimu
-              </p>
-            </div>
-          </div>
-        </div>
         {/* map FooterText */}
         <div className="flex flex-row gap-4 justify-center mt-8">
           {FooterText.map((item, index) => (
@@ -126,4 +100,4 @@ const Rightpage_home = () => {
   );
 };
 
-export default Rightpage_home;
+export default Rightpage_tantangan;

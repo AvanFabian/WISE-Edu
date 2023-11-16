@@ -1,4 +1,4 @@
-import "./secondroute.css";
+import "../globals.css";
 import dynamic from "next/dynamic";
 const SideBar = dynamic(() => import("@/components/Sidebar"), { ssr: false });
 const RightPage = dynamic(() => import("@/components/RightPage"), {

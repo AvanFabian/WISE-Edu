@@ -12,7 +12,7 @@ const FooterText2 = [{ text: "FAQ" }, { text: "Hubungi Developer" }];
 const rightpage_papanskor = () => {
   return (
     <div className="sticky top-0 flex flex-col max-w-[390px]">
-        <div className="flex relative flex-col w-full h-max mt-4 z-50 bg-[#ebe2cd] border-[3px] border-[#c4bfbf62] rounded-2xl">
+        <div className="flex relative flex-col w-full h-max mt-4 z-50 bg-[#ebe2cd] border-[3px] border-[#c4bfbf62] rounded-2xl overflow-hidden">
           <div className="ml-1 mt-1 px-3 py-3">
             <div className="flex flex-col mr-1">
               <h2 className="text-[#8a8a8a] text-xs mb-2 mr-auto font-bold subpixel-antialiased uppercase">

@@ -69,13 +69,13 @@ const page = () => {
           <div className="flex flex-row ml-5 w-full">
             <div className="flex w-full justify-start ">
               <span className="text-sm font-medium text-[#414040] ml-2 justify-end my-auto">
-                John Doe
+                John Doe&nbsp;|&nbsp;XII IPA 1
               </span>
             </div>
             <div className="flex w-full justify-end">
-              <span className="text-sm font-medium text-[#414040] ml-2 justify-end my-auto">
-                Kelas 12
-              </span>
+                <span className="text-sm font-normal text-[#414040] ml-2 justify-end my-auto">
+                  8 / 10 Soal
+                </span>
             </div>
           </div>
         </div>

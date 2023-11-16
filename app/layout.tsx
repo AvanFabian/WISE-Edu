@@ -1,9 +1,5 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import dynamic from "next/dynamic";
-import "@radix-ui/themes/styles.css";
-import { Theme } from "@radix-ui/themes";
-
 
 export const metadata: Metadata = {
   title: "WISE Education",
@@ -17,12 +13,10 @@ export default function RootLayout({
 }) {
   return (
     // hydration pass
-    <html lang="en" className="scroll-smooth" suppressHydrationWarning>
-      <Theme>
+    <html lang="en" className="scroll-smooth">
         <body className="overflow-y-auto overflow-x-hidden max-w-screen max-h-screen">
           {children}
         </body>
-      </Theme>
     </html>
   );
 }

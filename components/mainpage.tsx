@@ -11,7 +11,7 @@ const mainpage = () => {
   return (
     <div className="flex flex-col">
       <div className="flex flex-col min-h-screen lg:max-w-[600px] align-top mr-6">
-        <div className="w-full bg-gradient-to-l from-[#bc998e] to-[#8B6B61] mt-4 py-5 px-3 rounded-xl">
+        <div className="w-full bg-gradient-to-l from-[#bc998e] to-[#8B6B61] mt-4 py-5 px-4 rounded-xl shadow-xl">
           <div className="grid grid-cols-2 w-full">
             <div className="flex flex-col align-middle my-auto">
               <h1 className="text-[#fffdf1] text-md font-bold mb-2 capitalize subpixel-antialiased">
