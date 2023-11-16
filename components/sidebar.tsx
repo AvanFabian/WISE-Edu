@@ -74,7 +74,7 @@ const sidebar = () => {
             }`}
             onClick={() => router.push(item.url)}
           >
-            <Link href={item.attribution}>
+            <Link href={item.attribution} target="_blank">
               <Image
                 src={item.icon}
                 width={32}

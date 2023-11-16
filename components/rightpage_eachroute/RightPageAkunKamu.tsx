@@ -7,8 +7,8 @@ import {
   performabelajar,
   kompetisi_trophy,
 } from "@/public/assets/right-icons";
-import { UserRight } from "@/public/assets/akunkamu_icons";
-import { akunkamu } from "@/public/assets/side_icons";
+import { UserRight2 } from "@/public/assets/akunkamu_icons";
+import Link from "next/link";
 
 const HoveringCard = dynamic(() => import("./HoveringCard"), {
   ssr: false,
@@ -49,21 +49,23 @@ const Rightpage_home = () => {
       </div>
       <div className="flex flex-col w-full mt-8 ml-3">
         <div className="flex relative flex-col w-full h-max mt-4 bg-[#ebe2cd] border-[3px] border-[#c4bfbf62] rounded-2xl">
-          <div className="ml-1 mt-1 mb-1 px-3 py-3">
+          <div className="ml-1 mt-1 px-3 py-3">
             <div className="flex flex-row mr-1 ">
               <h2 className="text-[#414040] text-sm font-bold subpixel-antialiased capitalize">
-                Pengaturan Akun Kamu < br/> dapat dilakukan di sini
+                Pengaturan Akun Kamu <br /> dapat dilakukan di sini
               </h2>
             </div>
-            {/* <div className="flex w-full justify-center">
-              <Image
-                src={UserRight}
-                width={200}
-                height={55}
-                alt="WISE Edu Logo"
-                className="cursor-pointer"
-              />
-            </div> */}
+            <div className="flex w-full justify-center">
+              <Link href="https://storyset.com/illustration/browser-stats/bro#A28474FF&hide=&hide=complete" target="_blank">
+                <Image
+                  src={UserRight2}
+                  width={250}
+                  height={125}
+                  alt="WISE Edu Logo"
+                  className="cursor-pointer"
+                />
+              </Link>
+            </div>
           </div>
         </div>
         {/* map FooterText */}

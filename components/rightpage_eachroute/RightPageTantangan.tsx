@@ -50,7 +50,7 @@ const Rightpage_tantangan = () => {
         <div className="flex flex-col bg-[#ebe2cd] border-[3px] border-[#c4bfbf62] rounded-2xl">
           <div className="ml-1 mt-1 px-3 py-3">
             <h2 className="text-[#414040] text-sm font-bold subpixel-antialiased capitalize">
-              Ayo Berkompetisi dengan Siswa Lain!
+              Selesaikan Tantangan Untuk<br /> Meningkatkan Peringkatmu
             </h2>
             <div className="grid grid-cols-6 gap-6 mt-4 ">
               <Image
@@ -68,7 +68,7 @@ const Rightpage_tantangan = () => {
             <div className="flex justify-center">
               <button className="flex transition-all duration-150 mt-6 bg-[#8B6B61] hover:bg-[#d6aa9d] justify-center rounded-2xl border-b-4 border-[#020202] shadow-2xl w-full py-[12px]">
                 <p className="text-[15px] font-bold text-white uppercase">
-                  Ikuti Kompetisi
+                  Mulai Mengerjakan
                 </p>
               </button>
             </div>
