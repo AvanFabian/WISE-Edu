@@ -12,14 +12,12 @@ import {
 const HoveringCard = dynamic(() => import("./HoveringCard"), {
   ssr: false,
 });
+const FooterText = dynamic(() => import("@/components/FooterText"), {
+  ssr: false,
+});
 
 const MapelImage = [{ icon: biologilecture, mapel: "Biologi" }];
 
-const FooterText = [
-  { text: "Kebijakan Privasi" },
-  { text: "Syarat dan Ketentuan" },
-];
-const FooterText2 = [{ text: "FAQ" }, { text: "Hubungi Developer" }];
 
 const Rightpage_home = () => {
   return (
@@ -101,26 +99,7 @@ const Rightpage_home = () => {
           </div>
         </div>
         {/* map FooterText */}
-        <div className="flex flex-row gap-4 justify-center mt-8">
-          {FooterText.map((item, index) => (
-            <span
-              key={index}
-              className="text-[#5c5c5c] opacity-80 text-[13px] cursor-pointer font-bold subpixel-antialiased uppercase"
-            >
-              {item.text}
-            </span>
-          ))}
-        </div>
-        <div className="flex flex-row gap-4 justify-center mt-3 mb-6">
-          {FooterText2.map((item, index) => (
-            <span
-              key={index}
-              className="text-[#5c5c5c] opacity-80 text-[13px] cursor-pointer font-bold subpixel-antialiased uppercase"
-            >
-              {item.text}
-            </span>
-          ))}
-        </div>
+        <FooterText />
       </div>
     </div>
   );

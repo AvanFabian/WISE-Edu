@@ -1,15 +1,14 @@
 import Image from "next/image";
 import Link from "next/link";
+import dynamic from "next/dynamic";
 import {
   kompetisi_trophy,
 } from "@/public/assets/right-icons";
 import { Kompetisi } from "@/public/assets/papanskor_icons";
 
-const FooterText = [
-  { text: "Kebijakan Privasi" },
-  { text: "Syarat dan Ketentuan" },
-];
-const FooterText2 = [{ text: "FAQ" }, { text: "Hubungi Developer" }];
+const FooterText = dynamic(() => import("@/components/FooterText"), {
+  ssr: false,
+});
 
 const rightpage_papanskor = () => {
   return (
@@ -59,26 +58,8 @@ const rightpage_papanskor = () => {
           </div>
         </div>
       </div>
-      <div className="flex flex-row gap-4 justify-center mt-8">
-        {FooterText.map((item, index) => (
-          <span
-            key={index}
-            className="text-[#5c5c5c] opacity-80 text-[13px] cursor-pointer font-bold subpixel-antialiased uppercase"
-          >
-            {item.text}
-          </span>
-        ))}
-      </div>
-      <div className="flex flex-row gap-4 justify-center mt-3 mb-6">
-        {FooterText2.map((item, index) => (
-          <span
-            key={index}
-            className="text-[#5c5c5c] opacity-80 text-[13px] cursor-pointer font-bold subpixel-antialiased uppercase"
-          >
-            {item.text}
-          </span>
-        ))}
-      </div>
+      {/* map FooterText */}
+      <FooterText />
     </div>
   );
 };

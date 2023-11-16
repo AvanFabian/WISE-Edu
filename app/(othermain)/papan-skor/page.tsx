@@ -46,7 +46,7 @@ const page = () => {
         </span>
       </div>
       {/* Papan peringkat */}
-      <div className="flex flex-col w-[700px] border-y border-[#b4b4b4] mx-auto mt-12">
+      <div className="flex flex-col w-[660px] border-y border-[#b4b4b4] self-center mt-12">
         <div className="flex flex-row w-full px-2 py-3">
           {/* profil + peringkat */}
           <div className="flex flex-row gap-3">
