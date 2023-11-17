@@ -80,7 +80,7 @@ const sidebar = () => {
                 width={32}
                 height={45}
                 alt="WISE Edu Logo"
-                className="sm:w-[28px] lg:w-[32px] cursor-alias"
+                className="w-[20px] sm:w-[22px] md:w-[28px] lg:w-[32px] cursor-alias"
               />
             </Link>
             <span
