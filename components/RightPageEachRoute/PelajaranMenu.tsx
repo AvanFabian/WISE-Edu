@@ -15,9 +15,9 @@ const HoveringCard = ({ mapel }) => (
           className="cursor-pointer"
         />
       </HoverCard.Trigger>
-      <HoverCard.Portal className="h-[500px] overflow-scroll">
+      <HoverCard.Portal>
         <HoverCard.Content
-          className="data-[side=bottom]:animate-slideUpAndFade data-[side=right]:animate-slideLeftAndFade data-[side=left]:animate-slideRightAndFade data-[side=top]:animate-slideDownAndFade w-[300px] rounded-xl bg-[#ebe2cd] shadow-[hsl(206_22%_7%_/_35%)_0px_10px_38px_-10px,hsl(206_22%_7%_/_20%)_0px_10px_20px_-15px] data-[state=open]:transition-all "
+          className="h-[400px] overflow-y-scroll data-[side=bottom]:animate-slideUpAndFade data-[side=right]:animate-slideLeftAndFade data-[side=left]:animate-slideRightAndFade data-[side=top]:animate-slideDownAndFade w-[300px] rounded-xl bg-[#ebe2cd] shadow-[hsl(206_22%_7%_/_35%)_0px_10px_38px_-10px,hsl(206_22%_7%_/_20%)_0px_10px_20px_-15px] data-[state=open]:transition-all "
           sideOffset={5}
         >
           <div className="flex flex-row">
