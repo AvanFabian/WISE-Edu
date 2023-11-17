@@ -9,14 +9,12 @@ import {
   panah_ikut_kompetisi,
 } from "@/public/assets/right-icons";
 
-const HoveringCard = dynamic(() => import("./HoveringCard"), {
+const HoveringCard = dynamic(() => import("./PelajaranMenu}"), {
   ssr: false,
 });
 const FooterText = dynamic(() => import("@/components/FooterText"), {
   ssr: false,
 });
-
-const MapelImage = [{ icon: biologilecture, mapel: "Biologi" }];
 
 
 const Rightpage_home = () => {
