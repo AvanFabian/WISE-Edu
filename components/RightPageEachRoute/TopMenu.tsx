@@ -1,5 +1,6 @@
 import React from 'react'
 import dynamic from "next/dynamic";
+import Image from "next/image";
 
 import {
     biologilecture,
@@ -12,15 +13,15 @@ import {
 
   const MapelImage = [{ icon: biologilecture, mapel: "Biologi" }];
 
-  const PelajaranMenu = dynamic(() => import("./RightPageEachRoute/PelajaranMenu"), {
-      ssr: false,
+  const PelajaranMenu = dynamic(() => import("./PelajaranMenu"), {
+    ssr: false,
   });
 
 const RightPageTopMenu = () => {
   return (
     <div className="flex flex-row gap-8 mt-7 ml-5">
     <div className="flex flex-row cursor-pointer m-auto">
-      <HoveringCard mapel={MapelImage} />
+      <PelajaranMenu mapel={MapelImage} />
     </div>
     <div className="flex flex-row items-center m-auto">
       <Image src={calendar} width={30} height={35} alt="WISE Edu Logo" />

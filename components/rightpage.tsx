@@ -3,10 +3,10 @@ import React from "react";
 import dynamic from "next/dynamic";
 import { usePathname } from 'next/navigation';
 
-const Rightpage_Home = dynamic(() => import("@/components/rightpage_eachroute/RightPageHome"), { ssr: false });
-const Rightpage_Papanskor = dynamic(() => import("@/components/rightpage_eachroute/RightPagePapanSkor"), { ssr: false });
-const Rightpage_Tantangan = dynamic(() => import("@/components/rightpage_eachroute/RightPageTantangan"), { ssr: false });
-const Rightpage_Akunkamu = dynamic(() => import("@/components/rightpage_eachroute/RightPageAkunKamu"), { ssr: false });
+const Rightpage_Home = dynamic(() => import("@/components/RightPageEachRoute/RightPageHome"), { ssr: false });
+const Rightpage_Papanskor = dynamic(() => import("@/components/RightPageEachRoute/RightPagePapanSkor"), { ssr: false });
+const Rightpage_Tantangan = dynamic(() => import("@/components/RightPageEachRoute/RightPageTantangan"), { ssr: false });
+const Rightpage_Akunkamu = dynamic(() => import("@/components/RightPageEachRoute/RightPageAkunKamu"), { ssr: false });
 
 const rightpage = () => {
   const pathname = usePathname()

@@ -9,10 +9,10 @@ import {
   panah_ikut_kompetisi,
 } from "@/public/assets/right-icons";
 
-const HoveringCard = dynamic(() => import("./HoveringCard"), {
+const TopMenu = dynamic(() => import("@/components/RightPageEachRoute/TopMenu"), {
   ssr: false,
 });
-const FooterText = dynamic(() => import("@/components/FooterText"), {
+const FooterText = dynamic(() => import("@/components/RightPageEachRoute/FooterText"), {
   ssr: false,
 });
 
@@ -21,28 +21,8 @@ const MapelImage = [{ icon: biologilecture, mapel: "Biologi" }];
 const Rightpage_tantangan = () => {
   return (
     <div className="sticky top-0 flex flex-col max-w-[390px] max-h-max">
-      <div className="flex flex-row gap-8 mt-7 ml-5">
-        <div className="flex flex-row cursor-pointer m-auto">
-          <HoveringCard mapel={MapelImage} />
-        </div>
-        <div className="flex flex-row items-center m-auto">
-          <Image src={calendar} width={30} height={35} alt="WISE Edu Logo" />
-          <span className="font-bold text-xs text-[#5e5e5eab]">12</span>
-        </div>
-        <div className="flex flex-row items-center m-auto">
-          <Image src={achievement} width={30} height={35} alt="WISE Edu Logo" />
-          <span className="font-bold text-xs text-[#FFB501]">122</span>
-        </div>
-        <div className="flex flex-row items-center m-auto">
-          <Image
-            src={performabelajar}
-            width={30}
-            height={35}
-            alt="WISE Edu Logo"
-          />
-          <span className="font-bold text-xs text-[#31a13b]">Good</span>
-        </div>
-      </div>
+      {/* Top MEnu */}
+      <TopMenu />
       <div className="flex flex-col w-full mt-8 ml-3">
         <div className="flex flex-col bg-[#ebe2cd] border-[3px] border-[#c4bfbf62] rounded-2xl">
           <div className="ml-1 mt-1 px-3 py-3">

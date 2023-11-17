@@ -2,7 +2,7 @@ import React from "react";
 import * as HoverCard from "@radix-ui/react-hover-card";
 import Image from "next/image";
 
-const HoveringCard = ({ mapel }) => (
+const PelajaranMenu = ({ mapel }) => (
   console.log(mapel),
   (
     <HoverCard.Root>
@@ -179,4 +179,4 @@ const HoveringCard = ({ mapel }) => (
   )
 );
 
-export default HoveringCard;
+export default PelajaranMenu;
