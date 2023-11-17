@@ -16,7 +16,6 @@ const FooterText = dynamic(() => import("@/components/RightPageEachRoute/FooterT
   ssr: false,
 });
 
-
 const Rightpage_home = () => {
   return (
     <div className="sticky top-0 flex flex-col max-w-[390px] max-h-max">

@@ -16,8 +16,6 @@ const FooterText = dynamic(() => import("@/components/RightPageEachRoute/FooterT
   ssr: false,
 });
 
-const MapelImage = [{ icon: biologilecture, mapel: "Biologi" }];
-
 const Rightpage_tantangan = () => {
   return (
     <div className="sticky top-0 flex flex-col max-w-[390px] max-h-max">

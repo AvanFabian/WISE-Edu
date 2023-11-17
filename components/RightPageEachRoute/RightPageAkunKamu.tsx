@@ -10,8 +10,6 @@ import {
 import { UserRight2 } from "@/public/assets/akunkamu_icons";
 import Link from "next/link";
 
-const MapelImage = [{ icon: biologilecture, mapel: "Biologi" }];
-
 const TopMenu = dynamic(() => import("@/components/RightPageEachRoute/TopMenu"), {
   ssr: false,
 });
