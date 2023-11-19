@@ -51,7 +51,7 @@ const sidebar = () => {
   const pathname = usePathname();
 
   return (
-    <div className="w-full min-h-screen pt-8 ">
+    <div className="w-full pt-8 ">
       <Flex
         direction="column"
         gap="3"

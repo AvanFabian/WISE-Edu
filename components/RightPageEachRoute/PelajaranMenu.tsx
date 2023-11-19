@@ -2,7 +2,12 @@ import React from "react";
 import * as HoverCard from "@radix-ui/react-hover-card";
 import Image from "next/image";
 
-const HoveringCard = ({ mapel }) => (
+interface Mapel {
+  mapel: string;
+  icon: string;
+}
+
+const HoveringCard: React.FC<{ mapel: Mapel[] }> = ({ mapel }) => (
   console.log(mapel),
   (
     <HoverCard.Root>

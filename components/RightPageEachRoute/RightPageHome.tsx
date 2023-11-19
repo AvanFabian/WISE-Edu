@@ -18,7 +18,7 @@ const FooterText = dynamic(() => import("@/components/RightPageEachRoute/FooterT
 
 const Rightpage_home = () => {
   return (
-    <div className="sticky top-0 flex flex-col max-w-[390px] max-h-max">
+    <div className="sticky top-0 flex flex-col max-w-[390px]">
       {/* Top Menu */}
       <TopMenu />
       <div className="flex flex-col w-full mt-8 ml-3">
@@ -49,7 +49,7 @@ const Rightpage_home = () => {
             </div>
           </div>
         </div>
-        <div className="flex relative flex-col w-full h-max mt-4 bg-[#ebe2cd] border-[3px] border-[#c4bfbf62] rounded-2xl">
+        <div className="flex relative flex-col w-full mt-4 bg-[#ebe2cd] border-[3px] border-[#c4bfbf62] rounded-2xl">
           <div className="ml-1 mt-1 px-3 py-3">
             <div className="flex flex-row mr-1">
               <h2 className="text-[#414040] text-sm mr-auto font-bold subpixel-antialiased capitalize">

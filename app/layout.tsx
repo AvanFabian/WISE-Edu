@@ -13,8 +13,8 @@ export default function RootLayout({
 }) {
   return (
     // hydration pass
-    <html lang="en" className="scroll-smooth">
-        <body className="overflow-y-auto overflow-x-hidden max-w-screen max-h-screen">
+    <html lang="en" className="scroll-smooth min-h-screen">
+        <body className="min-h-screen">
           {children}
         </body>
     </html>

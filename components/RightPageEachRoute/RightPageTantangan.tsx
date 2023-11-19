@@ -18,7 +18,7 @@ const FooterText = dynamic(() => import("@/components/RightPageEachRoute/FooterT
 
 const Rightpage_tantangan = () => {
   return (
-    <div className="sticky top-0 flex flex-col max-w-[390px] max-h-max">
+    <div className="sticky top-0 flex flex-col max-w-[390px]">
       {/* Top MEnu */}
       <TopMenu />
       <div className="flex flex-col w-full mt-8 ml-3">
