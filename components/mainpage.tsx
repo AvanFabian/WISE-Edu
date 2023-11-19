@@ -10,7 +10,7 @@ import {
 const mainpage = () => {
   return (
     <div className="flex flex-col">
-      <div className="flex flex-col min-h-screen lg:max-w-[600px] align-top mr-6">
+      <div className="flex flex-col min-h-screen lg:min-w-[600px] align-top mr-6">
         <div className="w-full bg-gradient-to-l from-[#bc998e] to-[#8B6B61] mt-4 py-5 px-4 rounded-xl shadow-xl">
           <div className="grid grid-cols-2 w-full">
             <div className="flex flex-col align-middle my-auto">
@@ -37,24 +37,22 @@ const mainpage = () => {
           </div>
         </div>
         <div className="flex flex-col mt-16 mb-4 gap-28">
-          <div className="flex flex-row">
+          <div className="relative overflow-visible flex flex-row">
             <Image
               src={bubblechat_mulai}
-              width={109}
+              width={100}
               height={32}
               alt="WISE Edu Logo"
-              className="absolute left-[425px] top-[205px] z-30 animate-bounce"
+              className="absolute left-9 w-[100px] top-[-36px] z-30 animate-bounce"
             />
             <div className="m-auto flex flex-col">
               <button className="absolute flex z-20 hover:translate-y-[12px] transition-all rounded-full m-auto w-max py-3 px-4 h-max bg-[#8B6B61]">
-                <div className="">
                   <Image
                     src={bintang_level}
                     width={35}
                     height={32}
                     alt="WISE Edu Logo"
                   />
-                </div>
               </button>
               <button className="z-10 mt-2 flex transition-all rounded-full w-max py-3 px-4 h-max bg-[#b98879]">
                 <Image
