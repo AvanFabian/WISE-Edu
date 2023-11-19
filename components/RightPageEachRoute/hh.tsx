@@ -16,13 +16,13 @@ const FooterText = dynamic(
   }
 );
 
-const Rightpage_home = () => {
+const rightpage_papanskor = () => {
   return (
     <div className="sticky top-0 flex flex-col max-w-[390px]">
       {/* Top Menu */}
       <TopMenu />
       <div className="flex flex-col w-full mt-8 ml-3">
-        <div className="flex flex-col bg-[#ebe2cd] border-[3px] border-[#c4bfbf62] rounded-2xl">
+        <div className="flex flex-col bg-[#ebe2cd] border-[3px] border-[#c4bfbf62] mt-8 ml-3 rounded-2xl">
           <div className="ml-1 mt-1 px-3 py-3">
             <h2 className="text-[#414040] text-sm font-bold subpixel-antialiased capitalize">
               Selamat Berkompetisi
@@ -50,4 +50,4 @@ const Rightpage_home = () => {
   );
 };
 
-export default Rightpage_home;
+export default rightpage_papanskor;

@@ -1,3 +1,5 @@
+'use client'
+import React from 'react';
 import dynamic from "next/dynamic";
 import Image from "next/image";
 
@@ -10,12 +12,22 @@ const TantanganBanner = dynamic(
   }
 );
 
+const ProgressBar = dynamic(
+  () => import("@/components/TantanganStuff/ProgressBar"),
+  {
+    ssr: false,
+  }
+);
 
 const page = () => {
+
+   const [progressVal, setProgressVal] = React.useState(0);
+
+
   return (
-    <div className="flex flex-col items-end w-full gap-8">
+    <div className="flex flex-col items-end w-[620px] gap-8">
       <TantanganBanner />
-      <div className="relative flex flex-col w-[660px]">
+      <div className="relative flex flex-col w-full">
         <div className="w-full flex flex-row mb-2">
           <div className="w-full">
             <h2 className="text-[#414040] text-base font-bold">Tantangan Harian</h2>
@@ -34,8 +46,13 @@ const page = () => {
             />
           </div>
           <div className="flex basis-5/6">
-            <div className="w-full ml-5 flex flex-col">
-              <h2 className="text-[#414040] text-sm font-bold ">Dapatkan Beberapa [poin]</h2>
+            <div className="w-full ml-5 flex flex-col align-middle">
+              
+              <h2 className="text-[#414040] text-sm font-bold my-auto">[Selesaikan 5 Soal Integral]</h2>
+              <div className='w-full flex flex-row'>
+                <ProgressBar progressVal={progressVal} />
+                <span className='text-[#414040] text-sm font-normal'>[Gambar]</span>
+              </div>
             </div>
           </div>
         </div>

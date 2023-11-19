@@ -9,12 +9,12 @@ import {
 
 const mainpage = () => {
   return (
-    <div className="flex flex-col w-full">
-      <div className="flex flex-col self-end max-w-full lg:max-w-[75%] align-top mr-6">
+    <div className="flex flex-col w-[610px]">
+      <div className="flex flex-col self-end max-w-full w-full align-top mr-6">
         <div className="w-full bg-gradient-to-l from-[#bc998e] to-[#8B6B61] mt-4 py-5 px-4 rounded-xl shadow-xl">
           <div className="grid grid-cols-2 w-full">
             <div className="flex flex-col align-middle my-auto">
-              <h1 className="text-[#fffdf1] text-md font-bold mb-2 capitalize subpixel-antialiased">
+              <h1 className="text-[#d4d1c1] text-md font-bold mb-2 capitalize subpixel-antialiased">
                 Matematika bagian 1
               </h1>
               <h2 className="text-[#fffdf1] text-xs font-normal subpixel-antialiased">
