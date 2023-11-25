@@ -25,7 +25,7 @@ const page = () => {
 
 
   return (
-    <div className="flex flex-col items-end w-[620px] gap-8">
+    <div className="flex flex-col items-end w-[630px] gap-8">
       <TantanganBanner />
       <div className="relative flex flex-col w-full">
         <div className="w-full flex flex-row mb-2">

@@ -1,6 +1,6 @@
 "use client";
 import { Flex } from "@radix-ui/themes";
-import WISEDU_V2 from "@/public/assets/LogoText/WISEEDU-V3.svg";
+import SchEducation from "@/public/assets/LogoText/SchEducation.svg";
 import Image from "next/image";
 import Link from "next/link";
 import { useRouter, usePathname } from "next/navigation";
@@ -59,7 +59,7 @@ const sidebar = () => {
         className=" w-full px-2"
       >
         <Image
-          src={WISEDU_V2}
+          src={SchEducation}
           width={190}
           height={55}
           className="mb-7 lg:mb-5 hidden lg:block mx-auto"
