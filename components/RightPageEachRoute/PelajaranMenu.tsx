@@ -29,7 +29,7 @@ const HoveringCard: React.FC<{ mapel: Mapel[] }> = ({ mapel }) => (
             <div className="flex flex-col">
               <div className="flex border-b-2 border-[#b9b7b79f] ">
                 <span className="text-xs ml-4 py-2 text-center text-[#414040] font-bold uppercase">
-                  Mata Pelajaran
+                  Mapel Wajib
                 </span>
               </div>
               <div className="flex flex-row border-b-2 border-[#b9b7b79f] py-2 items-center">
@@ -132,7 +132,7 @@ const HoveringCard: React.FC<{ mapel: Mapel[] }> = ({ mapel }) => (
             <div className="flex flex-col">
               <div className="flex border-b-2 border-[#b9b7b79f] ">
                 <span className="text-xs ml-4 py-2 text-center text-[#414040] font-bold uppercase">
-                  Mata Pelajaran
+                  Mapel Umum
                 </span>
               </div>
               <div className="flex flex-row border-b-2 border-[#b9b7b79f] py-2 items-center">

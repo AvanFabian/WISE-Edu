@@ -6,6 +6,15 @@ import {
   bubblechat_mulai,
 } from "@/public/assets/mainpage_icons";
 
+import {  
+  Onlinelearning,
+  raisinghand,
+  Teacherstudent,
+  Winners,
+} 
+
+from "@/public/assets/mainpage_icons";
+
 const UnlockedButton = () => {
   return (
     <div className="flex flex-col">
@@ -56,26 +65,54 @@ const ButtonGroup = () => {
       <div className="items-center flex flex-col">
         <LockedButton />
       </div>
-      <div className="mr-12 items-end flex flex-col">
-        <LockedButton />
+      <div className="relative mr-12 items-end flex flex-col">
+        <LockedButton />  
+        <Image 
+         src={Onlinelearning}
+          width={275}
+          height={32}
+          alt="WISE Edu Logo"
+          className="invisible lg:visible absolute lg:left-[-60px] lg:top-[-120px] z-30"
+        />
       </div>
       <div className="items-center flex flex-col">
         <LockedButton />
       </div>
-      <div className="ml-12 items-start flex flex-col">
+      <div className="relative ml-12 items-start flex flex-col">
         <LockedButton />
+        <Image 
+         src={raisinghand}
+          width={275}
+          height={32}
+          alt="WISE Edu Logo"
+          className="invisible lg:visible absolute lg:right-[-60px] lg:top-[-120px] z-30"
+        />
       </div>
       <div className="items-center flex flex-col">
         <LockedButton />
       </div>
-      <div className="mr-12 items-end flex flex-col">
+      <div className="relative mr-12 items-end flex flex-col">
         <LockedButton />
+        <Image 
+         src={Teacherstudent}
+          width={275}
+          height={32}
+          alt="WISE Edu Logo"
+          className="invisible lg:visible absolute lg:left-[-60px] lg:top-[-120px] z-30"
+        />
       </div>
       <div className="items-center flex flex-col">
         <LockedButton />
       </div>
-      <div className="ml-12 items-start flex flex-col">
+      <div className="relative ml-12 items-start flex flex-col">
         <LockedButton />
+        <Image 
+         src={Winners}
+          width={275}
+          height={32}
+          alt="WISE Edu Logo"
+          className="invisible lg:visible absolute lg:right-[-60px] lg:top-[-120px] z-30"
+        />        
       </div>
     </div>
   );
