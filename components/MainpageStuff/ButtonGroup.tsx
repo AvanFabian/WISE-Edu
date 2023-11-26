@@ -71,6 +71,12 @@ const ButtonGroup = () => {
       <div className="mr-12 items-end flex flex-col">
         <LockedButton />
       </div>
+      <div className="items-center flex flex-col">
+        <LockedButton />
+      </div>
+      <div className="ml-12 items-start flex flex-col">
+        <LockedButton />
+      </div>
     </div>
   );
 };
