@@ -49,26 +49,98 @@ const page = () => {
       <div className="flex flex-col pt-6 gap-3">
         <h2 className="text-[#414040] text-base font-bold">Statistik Akun</h2>
         <div className="flex flex-row w-full gap-3">
-          <div className="w-full p-2 flex flex-row border-2 bg-[#ebe2cd] border-[#c4bfbf62] rounded-2xl">
-            <Image src={fire} width={50} height={50} alt="firelogo" />
+          <div className="relative w-full px-3 py-3 flex border-2 bg-[#ebe2cd] border-[#c4bfbf62] rounded-2xl justify-end">
+            {/* className="absolute top-[4px] left-0"  */}
+            <Image
+              src={fire}
+              width={40}
+              height={40}
+              alt="firelogo"
+              className="absolute top-[12px] left-3"
+            />
+            <div className="items-center flex w-3/4">
+              <div className="flex flex-col w-max">
+                <h2 className="text-[#414040] my-auto text-xs font-bold">
+                  Tantangan Selesai
+                </h2>
+                <h2 className="text-[#414040] my-auto text-xs font-bold">
+                  [5]
+                </h2>
+              </div>
+            </div>
           </div>
-          <div className="w-full p-2 flex flex-row border-2 bg-[#ebe2cd] border-[#c4bfbf62] rounded-2xl">
-            <Image src={fire} width={50} height={50} alt="firelogo" />
+          <div className="relative w-full px-3 py-3 flex border-2 bg-[#ebe2cd] border-[#c4bfbf62] rounded-2xl justify-end">
+            {/* className="absolute top-[4px] left-0"  */}
+            <Image
+              src={fire}
+              width={40}
+              height={40}
+              alt="firelogo"
+              className="absolute top-[12px] left-3"
+            />
+            <div className="items-center flex w-3/4">
+              <div className="flex flex-col w-max">
+                <h2 className="text-[#414040] my-auto text-xs font-bold">
+                  Tantangan Selesai
+                </h2>
+                <h2 className="text-[#414040] my-auto text-xs font-bold">
+                  [5]
+                </h2>
+              </div>
+            </div>
           </div>
         </div>
         <div className="flex flex-row w-full gap-3">
-          <div className="w-full p-2 flex flex-row border-2 bg-[#ebe2cd] border-[#c4bfbf62] rounded-2xl">
-            <Image src={fire} width={50} height={50} alt="firelogo" />
+          <div className="relative w-full px-3 py-3 flex border-2 bg-[#ebe2cd] border-[#c4bfbf62] rounded-2xl justify-end">
+            {/* className="absolute top-[4px] left-0"  */}
+            <Image
+              src={fire}
+              width={40}
+              height={40}
+              alt="firelogo"
+              className="absolute top-[12px] left-3"
+            />
+            <div className="items-center flex w-3/4">
+              <div className="flex flex-col w-max">
+                <h2 className="text-[#414040] my-auto text-xs font-bold">
+                  Tantangan Selesai
+                </h2>
+                <h2 className="text-[#414040] my-auto text-xs font-bold">
+                  [5]
+                </h2>
+              </div>
+            </div>
           </div>
-          <div className="w-full p-2 flex flex-row border-2 bg-[#ebe2cd] border-[#c4bfbf62] rounded-2xl">
-            <Image src={fire} width={50} height={50} alt="firelogo" />
+          <div className="relative w-full px-3 py-3 flex border-2 bg-[#ebe2cd] border-[#c4bfbf62] rounded-2xl justify-end">
+            {/* className="absolute top-[4px] left-0"  */}
+            <Image
+              src={fire}
+              width={40}
+              height={40}
+              alt="firelogo"
+              className="absolute top-[12px] left-3"
+            />
+            <div className="items-center flex w-3/4">
+              <div className="flex flex-col w-max">
+                <h2 className="text-[#414040] my-auto text-xs font-bold">
+                  Tantangan Selesai
+                </h2>
+                <h2 className="text-[#414040] my-auto text-xs font-bold">
+                  [5]
+                </h2>
+              </div>
+            </div>
           </div>
         </div>
       </div>
       <div className="flex flex-col pt-6">
         <div className="flex flex-row">
-          <h2 className="text-[#414040] text-base font-bold">Pencapaian</h2>
-          <h2 className="text-[#414040] text-base font-bold">Lihat Semua</h2>
+          <div className="flex w-full">
+            <h2 className="text-[#414040] text-base font-bold">Pencapaian</h2>
+          </div>
+          <div className="flex w-full justify-end">
+            <h2 className="text-[#BE8756] text-base font-bold">Lihat Semua</h2>
+          </div>
         </div>
       </div>
     </div>

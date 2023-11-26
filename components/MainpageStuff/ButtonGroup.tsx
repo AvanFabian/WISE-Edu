@@ -69,7 +69,7 @@ const ButtonGroup = () => {
         <LockedButton />  
         <Image 
          src={Onlinelearning}
-          width={275}
+          width={255}
           height={32}
           alt="WISE Edu Logo"
           className="invisible lg:visible absolute lg:left-[-60px] lg:top-[-120px] z-30"
@@ -82,7 +82,7 @@ const ButtonGroup = () => {
         <LockedButton />
         <Image 
          src={raisinghand}
-          width={275}
+          width={255}
           height={32}
           alt="WISE Edu Logo"
           className="invisible lg:visible absolute lg:right-[-60px] lg:top-[-120px] z-30"
@@ -95,7 +95,7 @@ const ButtonGroup = () => {
         <LockedButton />
         <Image 
          src={Teacherstudent}
-          width={275}
+          width={255}
           height={32}
           alt="WISE Edu Logo"
           className="invisible lg:visible absolute lg:left-[-60px] lg:top-[-120px] z-30"
@@ -108,7 +108,7 @@ const ButtonGroup = () => {
         <LockedButton />
         <Image 
          src={Winners}
-          width={275}
+          width={255}
           height={32}
           alt="WISE Edu Logo"
           className="invisible lg:visible absolute lg:right-[-60px] lg:top-[-120px] z-30"
