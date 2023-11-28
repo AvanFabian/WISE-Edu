@@ -10,51 +10,69 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
-enum Role {
-  USER
+
+enum UserRole {
+  STUDENT
   TEACHER
+  ADMIN
 }
 
+enum SubjectType {
+  COMPULSORY
+  GENERAL
+}
+
+// prisma/schema.prisma
 model User {
-  id        String   @id @default(auto()) @map("_id") @db.ObjectId
-  email     String   @unique
-  name      String
-  role      Role     @default(USER)
-  viewedCourses CourseEnrollment[]
+  id                String   @id @default(auto()) @map("_id") @db.ObjectId
+  email             String   @unique 
+  name              String
+  areasOfExpertise  String?  // Only for teachers
+  lastQuizTaken     DateTime? // Only for students
+  quizFrequency     Int?     // Only for students
+  role              UserRole  @default(STUDENT)
+  // Relations
+  enrollments       Enrollment[]
+  quizzesCreated    Quiz[]    @relation("QuizCreator")
 }
 
-model Course {
-  id            String   @id @default(auto()) @map("_id") @db.ObjectId
-  youtubeUrl    String
-  title         String
-  lecturerName  String
-  videoLength   Int
-  viewers       CourseEnrollment[]
-  test          Test?
+model Subject {
+  id                String   @id @default(auto()) @map("_id") @db.ObjectId
+  name              String
+  type              SubjectType
+  // Relations
+  subSubjects       SubSubject[]
 }
 
-model CourseEnrollment {
-  id        String   @id @default(auto()) @map("_id") @db.ObjectId
-  createdAt DateTime @default(now())
-  userId    String   @db.ObjectId
-  courseId  String   @db.ObjectId
-  user      User     @relation(fields: [userId], references: [id])
-  course    Course   @relation(fields: [courseId], references: [id])
-  @@unique([userId, courseId])
+model SubSubject {
+  id                String   @id @default(auto()) @map("_id") @db.ObjectId
+  name              String
+  // Relations
+  parentSubject     Subject   @relation(fields: [subjectId], references: [id])
+  subjectId         String    @db.ObjectId
 }
 
-model Test {
-  id          String   @id @default(auto()) @map("_id") @db.ObjectId
-  title       String
-  grade       Float?
-  courseId    String @unique @db.ObjectId
-  course      Course  @relation(fields: [courseId], references: [id])
-  questions   Question[]
+model Enrollment {
+  id                String   @id @default(auto()) @map("_id") @db.ObjectId
+  // Relations
+  student           User      @relation(fields: [userId], references: [id])
+  userId            String    @db.ObjectId
+  lecture           Lecture   @relation(fields: [lectureId], references: [id])
+  lectureId         String    @db.ObjectId
 }
-model Question {
-  id        String   @id @default(auto()) @map("_id") @db.ObjectId
-  text      String
-  answer    String
-  testId    String  @db.ObjectId
-  test      Test    @relation(fields: [testId], references: [id])
+
+model Lecture {
+  id                String   @id @default(auto()) @map("_id") @db.ObjectId
+  // Relations
+  enrollments       Enrollment[]
+  quizzes           Quiz[]
+}
+
+model Quiz {
+  id                String   @id @default(auto()) @map("_id") @db.ObjectId
+  // Relations
+  createdBy         User      @relation("QuizCreator", fields: [creatorId], references: [id])
+  creatorId         String    @db.ObjectId
+  lecture           Lecture   @relation(fields: [lectureId], references: [id])
+  lectureId         String    @db.ObjectId
 }

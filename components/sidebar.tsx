@@ -12,6 +12,7 @@ import {
   akunkamu,
   logout,
 } from "@/public/assets/side_icons";
+import { SessionProvider } from "next-auth/react"
 
 const sidebarItems = [
   {
