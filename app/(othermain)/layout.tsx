@@ -4,8 +4,7 @@ const SideBar = dynamic(() => import("@/components/Sidebar"), { ssr: false });
 const RightPage = dynamic(() => import("@/components/RightPage"), {
   ssr: false,
 });
-
-export default function OtherMainLayout({
+\export default function OtherMainLayout({
   children,
 }: {
   children: React.ReactNode;
