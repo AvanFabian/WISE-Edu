@@ -6,6 +6,7 @@ const SideBar = dynamic(() => import("../../components/Sidebar"), {
 const RightPage = dynamic(() => import("../../components/RightPage"), {
   ssr: false,
 });
+
 export default function OtherMainLayout({
   children,
 }: {
