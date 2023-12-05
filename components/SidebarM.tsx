@@ -17,7 +17,7 @@ const sidebar = () => {
   const userImage = session?.user?.image;
   console.log(status);
   return (
-    <div className="relative w-full lg:w-max pt-5 h-full">
+    <div className="relative w-full lg:w-max lg:pt-5 h-full">
       <div
         direction="row"
         gap="3"

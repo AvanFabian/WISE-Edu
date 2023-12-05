@@ -14,15 +14,17 @@ const SideBarMobile = dynamic(() => import("@/components/SidebarM"), {
 const RightPage = dynamic(() => import("@/components/RightPage"), {
   ssr: false,
 });
+const RightPageM = dynamic(() => import("@/components/RightPageM"), {
+  ssr: false,
+});
 
 export default function Home() {
   return (
     <main className="min-h-screen bg-[#F5ECD7]">
       <div className="hidden min-w-screen min-h-screen md:grid md:grid-cols-12 lg:grid lg:grid-cols-12 lg:max-w-full lg:min-h-screen">
         <div className="bg-[#F5ECD7] col-span-2 w-[67.5%] lg:w-max lg:h-full border-r-[2px] pr-2 border-[#c6c3c3] lg:border-none lg:fixed">
-        {/* <div className="bg-[#F5ECD7] fixed"> */}
+          {/* <div className="bg-[#F5ECD7] fixed"> */}
           <SideBar />
-
         </div>
         {/* <div className="hidden lg:col-span-2 lg:bg-[#F5ECD7] lg:border-r-[1px] lg:border-[#5e5e5e]"></div> */}
         <div className="hidden lg:block lg:col-span-2 lg:bg-[#F5ECD7] lg:border-r-[1px] lg:border-[#5e5e5e]"></div>
@@ -39,7 +41,7 @@ export default function Home() {
       </div>
       <div className="flex flex-col gap-3 max-w-full min-h-screen md:hidden">
         <div className="bg-[#F5ECD7]">
-          <SideBarMobile />
+          <RightPageM />
         </div>
         {/* <div className="row-span-1 bg-[#F5ECD7] border-r-[1px] border-[#5e5e5e]"></div> */}
 
@@ -50,7 +52,7 @@ export default function Home() {
         </div>
 
         <div className="sticky top-0 p-3 bg-[#F5ECD7] max-w-full">
-          <RightPage />
+          <SideBarMobile />
         </div>
       </div>
     </main>

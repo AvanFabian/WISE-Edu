@@ -37,7 +37,7 @@ const mainpage = () => {
           </div>
         </div>
         
-        <div className="flex flex-col mb-16">
+        <div className="flex flex-col mb-6 lg:mb-16">
           <ButtonGroup />
         </div>
       </div>
