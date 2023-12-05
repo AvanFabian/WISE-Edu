@@ -1,13 +1,15 @@
 import React from "react";
 import * as HoverCard from "@radix-ui/react-hover-card";
 import Image from "next/image";
+import { StaticImageData } from "next/image";
+import { type } from "os";
 
-interface Mapel {
+type Mapel = {
+  icon: StaticImageData;
   mapel: string;
-  icon: string;
-}
+};
 
-const HoveringCard: React.FC<{ mapel: Mapel[] }> = ({ mapel }) => (
+const HoveringCard = ({ mapel }: { mapel: Mapel[] }) => (
   console.log(mapel),
   (
     <HoverCard.Root>

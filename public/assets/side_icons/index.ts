@@ -5,5 +5,6 @@ import mission from './mission.png';
 import akunkamu from './akunkamu.png';
 import others from './others.png';
 import logout from './logout.png';
+import login from './login.png';
 
-export { belajar, trophy, lecturer, mission, akunkamu, others, logout };
+export { belajar, trophy, lecturer, mission, akunkamu, others, logout , login};

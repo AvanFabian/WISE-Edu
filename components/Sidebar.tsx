@@ -5,9 +5,8 @@ import SchEducation from "@/public/assets/LogoText/SchEducation.svg";
 import Image from "next/image";
 import { redirect, useRouter } from "next/navigation";
 import Link from "next/link";
-import { akunkamu, logout } from "@/public/assets/side_icons";
+import { akunkamu, logout, login } from "@/public/assets/side_icons";
 import { signIn, signOut, useSession } from "next-auth/react";
-import { type } from "os";
 
 const SideItems = dynamic(() => import("@/components/SidebarStuff/items"), {
   ssr: false,
@@ -18,32 +17,31 @@ const sidebar = () => {
   const userImage = session?.user?.image;
   console.log(status);
   return (
-    <div className="w-full pt-8">
+    <div className="relative w-max pt-6 h-full">
       <Flex
         direction="column"
         gap="3"
         justify="center"
-        className="w-full px-2 lg:px-2">
-        <Image
-          src={SchEducation}
-          width={190}
-          height={55}
-          className="hidden md:mb-3 lg:mb-5 lg:flex mx-auto"
-          alt="WISE Edu Logo"
-        />
+        className="w-full px-2 lg:px-2 text-center"
+      >
+        
+        <span className="hidden lg:block opacity-100 font-bold lg:mb-6 text-[20px] text-[#777777]">
+          Sekolah Menengah <br /> Atas Negeri 1 
+        </span>
         <SideItems userImage={userImage || akunkamu.src} />
         {/* <SideItems /> */}
       </Flex>
-      <Flex direction="column" justify="center" className="w-full lg:px-2 mt-12">
+      <Flex direction="column" justify="center" className="w-full lg:px-2 mt-6">
         {session?.user && status === "authenticated" && (
-          <Link 
+          <Link
             href="api/auth/signout"
-            className={`w-full lg:w-[75%] flex border-4 border-[#F5ECD7] bg-[#F5ECD7] transition-all duration-600
-            py-2 mb-1 gap-1 justify-center rounded-2xl`}
+            className={`w-full ml-1 lg:ml-0 lg:px-5 lg:first-letter flex lg:border-4 lg:border-[#F5ECD7] bg-[#F5ECD7] transition-all duration-600
+            py-2 mb-1 gap-1 justify-center lg:justify-start lg:items-center rounded-2xl cursor-pointer`}
             onClick={(e) => {
               e.preventDefault();
               signOut();
-            }}>
+            }}
+          >
             <div>
               <Image
                 src={logout}
@@ -61,31 +59,41 @@ const sidebar = () => {
           </Link>
         )}
         {!session?.user && status === "unauthenticated" && (
-        <Link 
-          href="/api/auth/signin"
-          className={`w-full lg:w-[75%] flex border-4 border-[#F5ECD7] bg-[#F5ECD7] transition-all duration-600
-          py-2 mb-1 gap-1 justify-center rounded-2xl`}
-          onClick={(e) => {
-            e.preventDefault();
-            signIn('google');
-          }}>
-          {/* <div> */}
+          <Link
+            href="/api/auth/signin"
+            className={`w-full ml-1 lg:ml-0 lg:px-5 lg:first-letter flex lg:border-4 lg:border-[#F5ECD7] bg-[#F5ECD7] transition-all duration-600
+          py-2 mb-1 gap-1 justify-center lg:justify-start lg:items-center rounded-2xl cursor-pointer`}
+            onClick={(e) => {
+              e.preventDefault();
+              signIn("google");
+            }}
+          >
+            {/* <div> */}
             <Image
-              src={logout}
-              width={30}
+              src={login}
+              width={50}
               height={45}
               alt="WISE Edu Logo"
-              className="w-[30px] rounded-full cursor-alias"
+              className="w-[35px] rounded-full cursor-alias"
             />
             <span
-              className={`font-bold text-[17px] lg:ml-3 hidden lg:block text-[#26581f]`}
+              className={`font-bold text-[17px] lg:ml-3 hidden lg:block text-[#404240]`}
             >
               Masuk
             </span>
-          {/* </div> */}
-        </Link>
+            {/* </div> */}
+          </Link>
         )}
       </Flex>
+      {/* <div className="flex w-full">
+        <Image
+          src={SchEducation}
+          width={165}
+          height={55}
+          className="hidden opacity-50 md:mb-3 lg:mb-5 lg:flex mx-auto align-bottom"
+          alt="WISE Edu Logo"
+        />
+      </div> */}
     </div>
   );
 };

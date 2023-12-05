@@ -1,6 +1,7 @@
 import React from 'react'
 import dynamic from "next/dynamic";
 import Image from "next/image";
+import { StaticImageData } from 'next/image';
 
 import {
     biologilecture,
@@ -11,11 +12,19 @@ import {
     panah_ikut_kompetisi,
   } from "@/public/assets/right-icons";
 
-  const MapelImage = [{ icon: biologilecture, mapel: "Biologi" }];
-
   const PelajaranMenu = dynamic(() => import("./PelajaranMenu"), {
     ssr: false,
   });
+
+type Mapel = {
+    icon: StaticImageData;
+    mapel: string;
+  };
+
+const MapelImage: Mapel[] = [
+  { icon: biologilecture, mapel: "Biologi" },
+  // other items...
+];
 
 const RightPageTopMenu = () => {
   return (
