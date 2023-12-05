@@ -17,7 +17,7 @@ const sidebar = () => {
   const userImage = session?.user?.image;
   console.log(status);
   return (
-    <div className="relative w-max pt-6 h-full">
+    <div className="relative w-max pt-5 h-full">
       <Flex
         direction="column"
         gap="3"
@@ -25,7 +25,7 @@ const sidebar = () => {
         className="w-full px-2 lg:px-2 text-center"
       >
         
-        <span className="hidden lg:block opacity-100 font-bold lg:mb-6 text-[20px] text-[#777777]">
+        <span className="hidden lg:block opacity-100 font-bold lg:mb-5 text-[20px] text-[#777777]">
           Sekolah Menengah <br /> Atas Negeri 1 
         </span>
         <SideItems userImage={userImage || akunkamu.src} />
@@ -62,7 +62,7 @@ const sidebar = () => {
           <Link
             href="/api/auth/signin"
             className={`w-full ml-1 lg:ml-0 lg:px-5 lg:first-letter flex lg:border-4 lg:border-[#F5ECD7] bg-[#F5ECD7] transition-all duration-600
-          py-2 mb-1 gap-1 justify-center lg:justify-start lg:items-center rounded-2xl cursor-pointer`}
+            py-2 mb-1 lg:mb-4 gap-1 justify-center lg:justify-start lg:items-center rounded-2xl cursor-pointer`}
             onClick={(e) => {
               e.preventDefault();
               signIn("google");
@@ -85,6 +85,13 @@ const sidebar = () => {
           </Link>
         )}
       </Flex>
+      <Image
+          src={SchEducation}
+          width={125}
+          height={55}
+          className="hidden absolute bottom-2 left-9 opacity-30 lg:flex mx-auto align-bottom"
+          alt="WISE Edu Logo"
+        />
       {/* <div className="flex w-full">
         <Image
           src={SchEducation}

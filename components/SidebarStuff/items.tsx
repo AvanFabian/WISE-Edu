@@ -3,6 +3,7 @@ import {
   trophy,
   lecturer,
   mission,
+  dashboard,
 } from "@/public/assets/side_icons";
 import Image from "next/image";
 import Link from "next/link";
@@ -49,6 +50,13 @@ const items = ({ userImage }: ItemsProps) => {
       text: "Akun Kamu",
       icon: userImage,
       url: "/profile-akun",
+      attribution: "https://www.flaticon.com/free-icons/user",
+      rounded: 'rounded-full'
+    },
+    {
+      text: "Dashboard",
+      icon: dashboard,
+      url: "/dashboard",
       attribution: "https://www.flaticon.com/free-icons/user",
       rounded: 'rounded-full'
     },
