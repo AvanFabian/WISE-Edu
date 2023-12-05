@@ -1,7 +1,9 @@
 import "./othermain.css";
 import dynamic from "next/dynamic";
-const SideBar = dynamic(() => import("@/components/Sidebar"), { ssr: false });
-const RightPage = dynamic(() => import("@/components/RightPage"), {
+const SideBar = dynamic(() => import("../../components/Sidebar"), {
+  ssr: false,
+});
+const RightPage = dynamic(() => import("../../components/RightPage"), {
   ssr: false,
 });
 export default function OtherMainLayout({

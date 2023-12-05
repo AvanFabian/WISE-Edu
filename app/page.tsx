@@ -13,7 +13,7 @@ const RightPage = dynamic(() => import("@/components/RightPage"), {
 export default function Home() {
   return (
     <main className="min-h-screen">
-      <div className="grid grid-cols-12 max-w-full min-h-screen">
+      <div className="hidden lg:grid lg:grid-cols-12 lg:max-w-full lg:in-h-screen">
         <div className="bg-[#F5ECD7] fixed">
           <SideBar />
         </div>
