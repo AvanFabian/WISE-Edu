@@ -7,7 +7,6 @@ import { redirect, useRouter } from "next/navigation";
 import Link from "next/link";
 import { akunkamu, logout } from "@/public/assets/side_icons";
 import { signIn, signOut, useSession } from "next-auth/react";
-import { type } from "os";
 
 const SideItems = dynamic(() => import("@/components/SidebarStuff/items"), {
   ssr: false,
@@ -18,71 +17,72 @@ const sidebar = () => {
   const userImage = session?.user?.image;
   console.log(status);
   return (
-    <div className="w-full pt-8">
+    <div className="w-full pt-8 ">
       <Flex
         direction="column"
         gap="3"
         justify="center"
-        className="w-full px-2 lg:px-2">
+        className=" w-full px-2"
+      >
         <Image
           src={SchEducation}
           width={190}
           height={55}
-          className="hidden md:mb-3 lg:mb-5 lg:flex mx-auto"
+          className="mb-7 lg:mb-5 hidden lg:block mx-auto"
           alt="WISE Edu Logo"
         />
         <SideItems userImage={userImage || akunkamu.src} />
         {/* <SideItems /> */}
       </Flex>
-      <Flex direction="column" justify="center" className="w-full lg:px-2 mt-12">
+      <Flex direction="column" className="w-full px-2 mt-12">
         {session?.user && status === "authenticated" && (
-          <Link 
-            href="api/auth/signout"
-            className={`w-full lg:w-[75%] flex border-4 border-[#F5ECD7] bg-[#F5ECD7] transition-all duration-600
-            py-2 mb-1 gap-1 justify-center rounded-2xl`}
-            onClick={(e) => {
-              e.preventDefault();
-              signOut();
-            }}>
-            <div>
+          <Link href="api/auth/signout">
+            <button
+              className={`sm:w-[75%] sm:mx-auto lg:w-full flex border-4 border-[#F5ECD7] px-5 bg-[#F5ECD7] transition-all duration-600
+            py-2 mb-1 gap-1 items-center rounded-2xl`}
+              onClick={(e) => {
+                e.preventDefault();
+                signOut();
+              }}
+            >
               <Image
                 src={logout}
-                width={50}
+                width={32}
                 height={45}
                 alt="WISE Edu Logo"
-                className="w-[35px] rounded-full cursor-alias"
+                className="sm:w-[28px] lg:w-[32px]"
               />
               <span
                 className={`font-bold text-[17px] lg:ml-3 hidden lg:block text-[#ec4d4d]`}
               >
                 Keluar Akun
               </span>
-            </div>
+            </button>
           </Link>
         )}
         {!session?.user && status === "unauthenticated" && (
-        <Link 
-          href="/api/auth/signin"
-          className={`w-full lg:w-[75%] flex border-4 border-[#F5ECD7] bg-[#F5ECD7] transition-all duration-600
-          py-2 mb-1 gap-1 justify-center rounded-2xl`}
-          onClick={(e) => {
-            e.preventDefault();
-            signIn('google');
-          }}>
-          {/* <div> */}
+        <Link href="/api/auth/signin">
+          <button
+            className={`sm:w-[75%] sm:mx-auto lg:w-full flex border-4 border-[#F5ECD7] px-5 bg-[#F5ECD7] transition-all duration-600
+            py-2 mb-1 gap-1 items-center rounded-2xl`}
+            onClick={(e) => {
+              e.preventDefault();
+              signIn("google");
+            }}
+          >
             <Image
               src={logout}
-              width={30}
+              width={32}
               height={45}
               alt="WISE Edu Logo"
-              className="w-[30px] rounded-full cursor-alias"
+              className="sm:w-[28px] lg:w-[32px]"
             />
             <span
               className={`font-bold text-[17px] lg:ml-3 hidden lg:block text-[#26581f]`}
             >
               Masuk
             </span>
-          {/* </div> */}
+          </button>
         </Link>
         )}
       </Flex>

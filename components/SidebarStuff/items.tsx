@@ -55,12 +55,12 @@ const items = ({ userImage }: ItemsProps) => {
   ];
 
   return (
-    <>
+    <div className="flex flex-col">
       {sidebarItems.map((item, index) => (
         <div
           key={index}
-          className={`sm:w-[75%] sm:mx-auto lg:w-full flex border-4 border-[#F5ECD7] px-5 bg-[#F5ECD7] transition-all duration-600
-            py-2 mb-1 gap-1 items-center rounded-2xl cursor-pointer  ${
+          className={`w-full lg:w-[75%] ml-1 md:first-letter flex lg:border-4 lg:border-[#F5ECD7] bg-[#F5ECD7] transition-all duration-600
+            py-2 mb-1 gap-1 justify-center rounded-2xl cursor-pointer  ${
               pathname == item.url ? "bg-[#be8756]" : "bg-[#F5ECD7]"
             }`}
           onClick={() => router.push(item.url)}
@@ -68,22 +68,21 @@ const items = ({ userImage }: ItemsProps) => {
           <Link href={item.attribution} target="_blank">
             <Image
               src={item.icon}
-              width={32}
+              width={50}
               height={45}
               alt="WISE Edu Logo"
-              className={`w-[20px] ${item.rounded} sm:w-[22px] md:w-[28px] lg:w-[32px] cursor-alias`}
+              className={`w-[35px] mx-auto ${item.rounded} cursor-alias`}
             />
           </Link>
           <span
             className={`font-bold text-[17px] ${
               pathname == item.url ? "text-[#f2f2f2]" : "text-[#777777]"
-            }  lg:ml-3 hidden lg:block`}
-          >
+            }  lg:ml-3 hidden lg:block`}>
             {item.text}
           </span>
         </div>
       ))}
-    </>
+    </div>
   );
 };
 

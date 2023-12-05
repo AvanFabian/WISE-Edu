@@ -9,7 +9,7 @@ const ButtonGroup: any = dynamic( () => import("@/components/MainpageStuff/Butto
 
 const mainpage = () => {
   return (
-    <div className="flex flex-col w-[630px] mr-6">
+    <div className="flex flex-col w-full lg:w-[630px] mr-1 lg:mr-6">
       <div className="flex flex-col self-end max-w-full w-full align-top">
         <div className="w-full bg-gradient-to-l from-[#bc998e] to-[#8B6B61] mt-4 py-5 px-4 rounded-xl shadow-xl">
           <div className="grid grid-cols-2 w-full">
