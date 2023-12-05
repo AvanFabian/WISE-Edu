@@ -13,7 +13,7 @@ const TantanganBanner = dynamic(
 );
 
 const ProgressBar = dynamic(
-  () => import("@/components/TantanganStuff/ProgressBar"),
+  () => import("@/components/MainpageStuff/ProgressBar"),
   {
     ssr: false,
   }

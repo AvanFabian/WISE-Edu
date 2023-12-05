@@ -48,7 +48,7 @@ const items = ({ userImage }: ItemsProps) => {
     {
       text: "Akun Kamu",
       icon: userImage,
-      url: "/src-akun",
+      url: "/profile-akun",
       attribution: "https://www.flaticon.com/free-icons/user",
       rounded: 'rounded-full'
     },

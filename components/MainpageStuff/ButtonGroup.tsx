@@ -1,5 +1,7 @@
+'use client'
 import React from "react";
 import Image from "next/image";
+import Link from "next/link";
 import {
   bintang_level,
   gembok_level,
@@ -43,7 +45,9 @@ const LockedButton = () => {
 
 const MulaiButton = () => {
   return (
-    <div className="relative px-2 overflow-visible flex flex-row">
+    <>
+    <button 
+    className="relative px-2 overflow-visible flex flex-row">
       <Image
         src={bubblechat_mulai}
         width={100}
@@ -52,7 +56,8 @@ const MulaiButton = () => {
         className="absolute w-[120px] left-0 top-[-40px] z-30 animate-bounce"
       />
       <UnlockedButton />
-    </div>
+    </button>
+    </>
   );
 };
 
@@ -60,7 +65,9 @@ const ButtonGroup = () => {
   return (
     <div className="grid grid-rows-3 gap-12 mt-16">
       <div className="ml-12 items-start flex flex-col">
-        <MulaiButton />
+        <Link href="/soal">
+          <MulaiButton />
+        </Link>
       </div>
       <div className="items-center flex flex-col">
         <LockedButton />

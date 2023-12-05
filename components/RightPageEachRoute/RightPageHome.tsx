@@ -1,10 +1,6 @@
 import Image from "next/image";
 import dynamic from "next/dynamic";
 import {
-  biologilecture,
-  calendar,
-  achievement,
-  performabelajar,
   kompetisi_trophy,
   panah_ikut_kompetisi,
 } from "@/public/assets/right-icons";
