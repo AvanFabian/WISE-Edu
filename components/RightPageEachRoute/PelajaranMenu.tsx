@@ -19,7 +19,7 @@ const HoveringCard = ({ mapel }: { mapel: Mapel[] }) => (
           width={35}
           height={35}
           alt="Radix UI"
-          className="cursor-pointer"
+          className="cursor-pointer w-[36px] lg:w-[30px]"
         />
       </HoverCard.Trigger>
       <HoverCard.Portal>

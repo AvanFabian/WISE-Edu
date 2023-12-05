@@ -22,7 +22,7 @@ const sidebar = () => {
         direction="row"
         gap="3"
         justify="center"
-        className="w-full px-2 lg:px-2 text-center"
+        className="w-full px-2 text-center"
       >
         
         <span className="hidden lg:block opacity-100 font-bold lg:mb-5 text-[20px] text-[#777777]">
@@ -31,7 +31,7 @@ const sidebar = () => {
         <SideItemsM userImage={userImage || akunkamu.src} />
         {/* <SideItems /> */}
       </Flex>
-      <Flex direction="column" justify="center" className="w-full lg:px-2 mt-6">
+      <Flex direction="row" className="w-full px-2 text-center">
         {session?.user && status === "authenticated" && (
           <Link
             href="api/auth/signout"
@@ -61,8 +61,8 @@ const sidebar = () => {
         {!session?.user && status === "unauthenticated" && (
           <Link
             href="/api/auth/signin"
-            className={`w-full ml-1 lg:ml-0 lg:px-5 lg:first-letter flex lg:border-4 lg:border-[#F5ECD7] bg-[#F5ECD7] transition-all duration-600
-            py-2 mb-1 lg:mb-4 gap-1 justify-center lg:justify-start lg:items-center rounded-2xl cursor-pointer`}
+            className={`w-full mx-auto flex lg:border-4 lg:border-[#F5ECD7] bg-[#F5ECD7] transition-all duration-600
+            py-2 mb-1 items-center mt-2 gap-5 justify-center rounded-2xl cursor-pointer`}
             onClick={(e) => {
               e.preventDefault();
               signIn("google");
@@ -77,7 +77,7 @@ const sidebar = () => {
               className="w-[35px] rounded-full cursor-alias"
             />
             <span
-              className={`font-bold text-[17px] lg:ml-3 hidden lg:block text-[#404240]`}
+              className={`font-bold ml-1 text-[17px] text-[#404240]`}
             >
               Masuk
             </span>

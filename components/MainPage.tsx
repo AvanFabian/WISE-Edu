@@ -11,13 +11,13 @@ const mainpage = () => {
   return (
     <div className="flex flex-col w-full lg:w-[630px] mr-1 lg:mr-6">
       <div className="flex flex-col self-end max-w-full w-full align-top">
-        <div className="w-full bg-gradient-to-l from-[#bc998e] to-[#8B6B61] mt-4 py-5 px-4 rounded-xl shadow-xl">
+        <div className="w-[90%] mx-auto lg:w-full bg-gradient-to-l from-[#bc998e] to-[#8B6B61] mt-4 py-4 lg:py-5 px-5 lg:px-4 rounded-xl shadow-xl">
           <div className="grid grid-cols-2 w-full">
             <div className="flex flex-col align-middle my-auto">
-              <h1 className="text-[#d4d1c1] text-md font-bold mb-2 capitalize subpixel-antialiased">
+              <h1 className="text-[#d4d1c1] lg:text-md text-sm font-bold mb-2 capitalize subpixel-antialiased">
                 Matematika bagian 1
               </h1>
-              <h2 className="text-[#fffdf1] text-xs font-normal subpixel-antialiased">
+              <h2 className="lg:text-[#fffdf1] text-[#ecebea] lg:text-xs text-[14px] font-semibold subpixel-antialiased">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit.
               </h2>
             </div>
@@ -29,7 +29,7 @@ const mainpage = () => {
                   height={32}
                   alt="WISE Edu Logo"
                 />
-                <h2 className="text-[#ffffff] text-[14px] font-bold uppercase">
+                <h2 className="text-[#ffffff] lg:text-[14px] text-[12px] font-bold uppercase">
                   Panduan Belajar
                 </h2>
               </div>
