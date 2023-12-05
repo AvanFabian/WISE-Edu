@@ -18,7 +18,7 @@ const sidebar = () => {
   console.log(status);
   return (
     <div className="relative w-full lg:w-max lg:pt-5 h-full">
-      <div
+      <Flex
         direction="row"
         gap="3"
         justify="center"
@@ -30,7 +30,7 @@ const sidebar = () => {
         </span>
         <SideItemsM userImage={userImage || akunkamu.src} />
         {/* <SideItems /> */}
-      </div>
+      </Flex>
       <Flex direction="column" justify="center" className="w-full lg:px-2 mt-6">
         {session?.user && status === "authenticated" && (
           <Link
