@@ -8,8 +8,6 @@ import {
     calendar,
     achievement,
     performabelajar,
-    kompetisi_trophy,
-    panah_ikut_kompetisi,
   } from "@/public/assets/right-icons";
 
   const PelajaranMenu = dynamic(() => import("./PelajaranMenu"), {
@@ -28,7 +26,7 @@ const MapelImage: Mapel[] = [
 
 const RightPageTopMenu = () => {
   return (
-    <div className="flex flex-row lg:gap-8 mt-5 lg:mt-7 lg:ml-5">
+    <div className="w-full flex justify-center flex-row lg:gap-8 mt-5 lg:mt-7 mx-auto lg:ml-5">
     <div className="flex flex-row cursor-pointer m-auto">
       <PelajaranMenu mapel={MapelImage} />
     </div>

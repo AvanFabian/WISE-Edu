@@ -10,7 +10,7 @@ import {
 
 const page = () => {
   return (
-    <div className="flex mt-9 flex-col w-[630px]">
+    <div className="flex mt-9 flex-col w-full lg:w-[630px]">
       {/* Image tropi */}
       <div className="w-full flex flex-row justify-center">
         <Image
@@ -46,7 +46,7 @@ const page = () => {
         </span>
       </div>
       {/* Papan peringkat */}
-      <div className="flex flex-col w-full border-y border-[#b4b4b4] self-center mt-12">
+      <div className="flex flex-col w-full px-4 lg:px-0 border-y border-[#b4b4b4] self-center mt-12 mb-12">
         <div className="flex flex-row w-full px-2 py-3">
           {/* profil + peringkat */}
           <div className="flex flex-row gap-3">

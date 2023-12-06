@@ -17,9 +17,9 @@ const rightpage = () => {
 
   const routeComponents: any = {
     '/': <Rightpage_Home_M />,
-    '/papan-skor': <Rightpage_Papanskor />,
-    '/daftar-pengajar': <Rightpage_Home />,
-    '/tantangan': <Rightpage_Tantangan />,
+    '/papan-skor': <Rightpage_Home_M />,
+    '/daftar-pengajar': <Rightpage_Home_M />,
+    '/tantangan': <Rightpage_Home_M />,
     '/profile-akun': <Rightpage_Akunkamu />,
   }
 

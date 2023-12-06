@@ -10,7 +10,7 @@ type PengajarCardProps = {
 
 const PengajarCard = ({ item }: PengajarCardProps) => {
   return (
-    <div className="relative mx-auto flex flex-col mt-12 shadow-xl w-[300px] gap-1 overflow-visible border-[3px] border-[#c4bfbf62] bg-[#ebe2cd] rounded-2xl ">
+    <div className="relative px-2 mx-auto flex flex-col mt-12 shadow-md lg:shadow-xl w-[285px] lg:w-[300px] gap-1 overflow-visible border-[3px] border-[#c4bfbf62] bg-[#ebe2cd] rounded-2xl ">
       <div className="flex p-2 mx-auto">
         <Image
           src={profile}
@@ -31,7 +31,7 @@ const PengajarCard = ({ item }: PengajarCardProps) => {
               <div className="w-max text-center mx-auto">
                 <div className="grid grid-cols-2 justify-center gap-1 mt-1">
                   {item.mata_pelajaran.map((item: string, index: number) => (
-                    <div className="flex transition-all duration-150 bg-[#8B6B61] shadow-xl px-2 py-2 rounded-2xl cursor-pointer">
+                    <div className="flex transition-all duration-150 bg-[#8B6B61] shadow-md lg:shadow-xl px-2 py-2 rounded-2xl cursor-pointer">
                       <span key={index} className="text-[#f2f2f2] mx-auto text-xs font-semibold subpixel-antialiased capitalize">
                         {item}
                       </span>

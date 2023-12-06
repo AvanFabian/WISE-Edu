@@ -11,18 +11,18 @@ const PengajarBanner = dynamic(() => import("@/components/PengajarStuff/Pengajar
 
 const TeacherProperty = [
   {
-    nama: "avan fabian daniswara Nur Hidayat",
+    nama: "Uzumaki Naruto",
     mata_pelajaran: ["matematika", "fisika", "kimia"],
   },
   {
-    nama: "tn. avan fabian daniswara Nurhalim",
+    nama: "Monkey D. Luffy",
     mata_pelajaran: ["matematika", "fisika", "kimia"],
   },
 ];
 
 const page = () => {
   return (
-    <div className="flex flex-col items-end w-[630px] gap-8">
+    <div className="flex flex-col items-end w-[630px] my-4 px-3 gap-8">
       <PengajarBanner />
       <div className="relative flex flex-row w-full">
         {TeacherProperty.map((item, index) => (

@@ -5,13 +5,18 @@ import {
   panah_ikut_kompetisi,
 } from "@/public/assets/right-icons";
 
-
-const TopMenu = dynamic(() => import("@/components/RightPageEachRoute/TopMenu"), {
-  ssr: false,
-});
-const FooterText = dynamic(() => import("@/components/RightPageEachRoute/FooterText"), {
-  ssr: false,
-});
+const TopMenu = dynamic(
+  () => import("@/components/RightPageEachRoute/TopMenu"),
+  {
+    ssr: false,
+  }
+);
+const FooterText = dynamic(
+  () => import("@/components/RightPageEachRoute/FooterText"),
+  {
+    ssr: false,
+  }
+);
 
 const Rightpage_home = () => {
   return (
@@ -19,7 +24,7 @@ const Rightpage_home = () => {
       {/* Top Menu */}
       <TopMenu />
       <div className="flex flex-col w-full mt-8 ml-3">
-        <div className="flex flex-col bg-[#ebe2cd] border-[3px] border-[#c4bfbf62] rounded-2xl">
+        <div className="hidden lg:flex flex-col bg-[#ebe2cd] border-[3px] border-[#c4bfbf62] rounded-2xl">
           <div className="ml-1 mt-1 px-3 py-3">
             <h2 className="text-[#414040] text-sm font-bold subpixel-antialiased capitalize">
               Ayo Berkompetisi dengan Siswa Lain!
@@ -38,10 +43,10 @@ const Rightpage_home = () => {
               </span>
             </div>
             <div className="flex justify-center">
-              <button 
+              <button
                 className="flex transition-all duration-150 mt-6 bg-[#8B6B61] hover:bg-[#d6aa9d] justify-center rounded-2xl border-b-4 border-[#020202] shadow-2xl w-full py-[12px]"
                 // onClick={() => main()}>
-                >
+              >
                 <p className="text-[15px] font-bold text-white uppercase">
                   Lihat Peringkat kamu
                 </p>
@@ -49,7 +54,7 @@ const Rightpage_home = () => {
             </div>
           </div>
         </div>
-        <div className="flex relative flex-col w-full mt-4 bg-[#ebe2cd] border-[3px] border-[#c4bfbf62] rounded-2xl">
+        <div className="hidden lg:flex relative flex-col w-full mt-4 bg-[#ebe2cd] border-[3px] border-[#c4bfbf62] rounded-2xl">
           <div className="ml-1 mt-1 px-3 py-3">
             <div className="flex flex-row mr-1">
               <h2 className="text-[#414040] text-sm mr-auto font-bold subpixel-antialiased capitalize">
@@ -76,7 +81,9 @@ const Rightpage_home = () => {
           </div>
         </div>
         {/* map FooterText */}
-        <FooterText />
+        <div className="hidden lg:block">
+          <FooterText />
+        </div>
       </div>
     </div>
   );
