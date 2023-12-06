@@ -29,7 +29,7 @@ const mainpage = () => {
             </div>
             <div className="flex justify-end items-center">
               <div className="flex flex-row w-max gap-2 cursor-pointer items-center px-2 py-2 h-max bg-transparent border-[3px] border-b-[5px] hover:opacity-75 border-[#49494962] rounded-xl">
-                <Link href="">
+                <Link href="https://www.youtube.com/watch?v=lScgN1qnirY">
                   <Image
                     src={panduan}
                     width={30}
@@ -64,7 +64,7 @@ const mainpage = () => {
             </div>
             <div className="flex justify-end items-center">
               <div className="flex flex-row w-max gap-2 cursor-pointer items-center px-2 py-2 h-max bg-transparent border-[3px] border-b-[5px] hover:opacity-75 border-[#49494962] rounded-xl">
-                <Link href="">
+                <Link href="https://www.youtube.com/watch?v=fj4B6etl8zs">
                   <Image
                     src={panduan}
                     width={30}

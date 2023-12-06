@@ -10,7 +10,7 @@ type PengajarCardProps = {
 
 const PengajarCard = ({ item }: PengajarCardProps) => {
   return (
-    <div className="relative px-2 mx-auto flex flex-col mt-12 shadow-md lg:shadow-xl w-[285px] lg:w-[300px] gap-1 overflow-visible border-[3px] border-[#c4bfbf62] bg-[#ebe2cd] rounded-2xl ">
+    <div className="relative px-2 lg:px-0 mx-auto lg:mx-0 flex flex-col mt-12 shadow-md lg:shadow-xl w-[285px] lg:w-[300px] gap-1 overflow-visible border-[3px] border-[#c4bfbf62] bg-[#ebe2cd] rounded-2xl ">
       <div className="flex p-2 mx-auto">
         <Image
           src={profile}

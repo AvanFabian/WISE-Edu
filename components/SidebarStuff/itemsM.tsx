@@ -77,15 +77,13 @@ const items = ({ userImage }: ItemsProps) => {
               }`}
             onClick={() => router.push(item.url)}
           >
-            <Link href={item.attribution} target="_blank">
               <Image
                 src={item.icon}
                 width={50}
                 height={45}
                 alt="WISE Edu Logo"
-                className={`w-[35px] ${item.rounded} cursor-alias`}
+                className={`w-[35px] ${item.rounded} lg:cursor-alias`}
               />
-            </Link>
             <br />
             <span
               className={`font-bold text-[17px] ${
@@ -107,7 +105,6 @@ const items = ({ userImage }: ItemsProps) => {
               }`}
             onClick={() => router.push(item.url)}
           >
-            <Link href={item.attribution} target="_blank">
               <Image
                 src={item.icon}
                 width={50}
@@ -115,7 +112,6 @@ const items = ({ userImage }: ItemsProps) => {
                 alt="WISE Edu Logo"
                 className={`w-[35px] ${item.rounded} cursor-alias`}
               />
-            </Link>
             <br />
             <span
               className={`font-bold text-[17px] ${

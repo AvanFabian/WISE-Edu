@@ -4,7 +4,7 @@ import { IlustrasiP, Pengajar1 } from "@/public/assets/pengajar_icons";
 
 const PengajarBanner = () => {
   return (
-    <div className="hidden lg:relative w-full bg-gradient-to-l from-[#b88575] to-[#977f77] mt-4 py-14 px-4 rounded-xl shadow-xl">
+    <div className="hidden lg:flex flex-col relative w-full bg-gradient-to-l from-[#b88575] to-[#977f77] mt-4 py-14 px-4 rounded-xl shadow-xl">
       <div className="flex flex-row w-full">
         <div className="flex flex-col align-middle my-auto basis-4/6">
           <h1 className="text-[#e7e7e7] text-md font-bold mb-2 capitalize subpixel-antialiased">

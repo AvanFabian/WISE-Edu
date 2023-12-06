@@ -8,6 +8,9 @@ const SideBar = dynamic(() => import("@/components/Sidebar"), {
 const SideBarMobile = dynamic(() => import("@/components/SidebarM"), {
   ssr: false,
 });
+const RightPage = dynamic(() => import("@/components/RightPage"), {
+  ssr: false,
+});
 const RightPageM = dynamic(() => import("@/components/RightPageM"), {
   ssr: false,
 });
@@ -34,7 +37,7 @@ export default function OtherMainLayout({
         </div>
 
         <div className="col-span-4 lg:sticky top-0 right-0 pl-8 bg-[#F5ECD7] max-w-full">
-          <RightPageM />
+          <RightPage />
         </div>
       </div>
       <div className="flex flex-col gap-3 max-w-full min-h-screen md:hidden">

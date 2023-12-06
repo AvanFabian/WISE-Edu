@@ -22,9 +22,9 @@ const TeacherProperty = [
 
 const page = () => {
   return (
-    <div className="flex flex-col items-end w-[630px] my-4 px-3 gap-8">
+    <div className="flex flex-col mx-auto justify-center w-[630px] my-4 gap-8">
       <PengajarBanner />
-      <div className="relative flex flex-row w-full">
+      <div className="relative flex flex-row w-full gap-1 lg:gap-4">
         {TeacherProperty.map((item, index) => (
           <PengajarCard item={item} key={index} />
         ))}
