@@ -62,7 +62,7 @@ const sidebar = () => {
           <Link
             href="/api/auth/signin"
             className={`w-full mx-auto flex lg:border-4 lg:border-[#F5ECD7] bg-[#F5ECD7] transition-all duration-600
-            py-2 mb-1 items-center mt-2 gap-2 justify-center rounded-2xl cursor-pointer`}
+            py-2 mb-1 items-center mt-2 gap-5 justify-center rounded-2xl cursor-pointer`}
             onClick={(e) => {
               e.preventDefault();
               signIn("google");
