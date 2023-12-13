@@ -17,7 +17,7 @@ const sidebar = () => {
   const userImage = session?.user?.image;
   console.log(status);
   return (
-    <div className="relative w-max pt-5 h-full">
+    <div className="w-max pt-5 h-full">
       <Flex
         direction="column"
         gap="3"
@@ -89,7 +89,7 @@ const sidebar = () => {
           src={SchEducation}
           width={125}
           height={55}
-          className="hidden absolute bottom-2 left-9 opacity-30 lg:flex mx-auto align-bottom"
+          className="hidden absolute left-9 opacity-30 lg:flex mx-auto align-bottom"
           alt="WISE Edu Logo"
         />
       {/* <div className="flex w-full">

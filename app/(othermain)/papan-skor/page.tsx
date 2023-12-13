@@ -10,7 +10,7 @@ import {
 
 const page = () => {
   return (
-    <div className="flex mt-9 flex-col w-full lg:w-[630px]">
+    <div className="flex mt-9 flex-col w-full w-full lg:w-[630px]">
       {/* Image tropi */}
       <div className="w-full flex flex-row justify-center">
         <Image
@@ -18,29 +18,29 @@ const page = () => {
           width={130}
           height={35}
           alt="WISE Edu Logo"
-          className="z-10 -rotate-45 opacity-90"
+          className="z-10 w-[90px] lg:w-[135px] -rotate-45 opacity-90"
         />
         <Image
           src={trophy_papanskor}
           width={130}
           height={35}
           alt="WISE Edu Logo"
-          className="z-50 opacity-95"
+          className="z-50 w-[90px] lg:w-[135px] opacity-95"
         />
         <Image
           src={trophy_papanskor}
           width={130}
           height={35}
           alt="WISE Edu Logo"
-          className="z-10 rotate-45 opacity-90"
+          className="z-10 w-[90px] lg:w-[135px] rotate-45 opacity-90"
         />
       </div>
       {/* Judul + subjudul */}
       <div className="w-full flex flex-col text-center mt-8">
-        <span className="text-lg text-[#1d1d1d] font-bold mb-3">
+        <span className="text-base lg:text-lg text-[#1d1d1d] font-bold mb-3">
           Lihat Detail Papan Skor!
         </span>
-        <span className="text-sm text-[#414040] font-normal">
+        <span className="text-xs lg:text-sm text-[#414040] font-normal">
           Selesaikan Latihan Soal sebanyak-banyaknya <br /> untuk meningkatkan
           peringkatmu!
         </span>
@@ -68,12 +68,12 @@ const page = () => {
           {/* nama + kelas */}
           <div className="flex flex-row ml-5 w-full">
             <div className="flex w-full justify-start ">
-              <span className="text-sm font-medium text-[#414040] ml-2 justify-end my-auto">
+              <span className="text-xs lg:text-sm font-medium text-[#414040] ml-2 justify-end my-auto">
                 John Doe&nbsp;|&nbsp;XII IPA 1
               </span>
             </div>
             <div className="flex w-full justify-end">
-                <span className="text-sm font-normal text-[#414040] ml-2 justify-end my-auto">
+                <span className="text-xs lg:text-sm font-normal text-[#414040] ml-2 justify-end my-auto">
                   8 / 10 Soal
                 </span>
             </div>

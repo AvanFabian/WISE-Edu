@@ -73,7 +73,8 @@ const items = ({ userImage }: ItemsProps) => {
             }`}
           onClick={() => router.push(item.url)}
         >
-          <Link href={item.attribution} target="_blank">
+          
+          <Link href={item.attribution} target="_blank" className="hidden">
             <Image
               src={item.icon}
               width={50}
@@ -82,6 +83,13 @@ const items = ({ userImage }: ItemsProps) => {
               className={`w-[35px] ${item.rounded} cursor-alias`}
             />
           </Link>
+          <Image
+              src={item.icon}
+              width={50}
+              height={45}
+              alt="WISE Edu Logo"
+              className={`w-[35px] ${item.rounded}`}
+            />
           <span
             className={`font-bold text-[17px] ${
               pathname == item.url ? "text-[#f2f2f2]" : "text-[#777777]"

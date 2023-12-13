@@ -29,18 +29,14 @@ const page = () => {
       <div className="flex flex-col mt-8 gap-3 w-full text-center">
         <div className="flex mx-auto flex-row w-[85%] lg:w-[1000px]">
           <h2 className="text-[#414040] text-sm lg:text-base mr-auto font-bold subpixel-antialiased capitalize">
-            Soal Nomor 1
+            Soal 
           </h2>
         </div>
         <div className="flex flex-col mx-auto w-[85%] lg:w-[1000px] bg-[#ebe2cd] border-[3px] border-[#c4bfbf62] rounded-2xl">
           <div className="ml-1 mt-1 p-4">
             <h2 className="text-[#020202] leading-loose text-xs font-normal subpixel-antialiased">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore
-              maiores earum deserunt dolor accusamus enim eaque nemo aliquam
-              tempora adipisci dicta, ipsa quisquam mollitia voluptatum vel odit
-              fugit facere quo soluta temporibus accusantium iusto! Fugiat et at
-              ratione harum debitis est! Provident exercitationem placeat
-              voluptate ducimus quaerat non ab repudiandae.
+              Sederhanakan persamaan berikut menjadi bentuk paling sederhana: <br />
+              3x^2 + 6x + 3 = 0
             </h2>
           </div>
         </div>
@@ -52,12 +48,12 @@ const page = () => {
         <div className="flex flex-col lg:flex-row mx-auto gap-4 p-4 w-[85%] lg:w-[1000px] bg-[#ebe2cd] border-[3px] border-[#c4bfbf62] rounded-2xl">
           <CardJawaban
             text={
-              "Lorem ipsum dolor sit amet consedm sd mf fnsdfnsdkfnskdfsd sdfnskdnf"
+              "(x-3)^2"
             }
           />
-          <CardJawaban text={"Lorem ipsum dolor sit amet"} />
-          <CardJawaban text={"Lorem ipsum dolor sit amet"} />
-          <CardJawaban text={"Lorem ipsum dolor sit amet"} />
+          <CardJawaban text={"(x+3)^2"} />
+          <CardJawaban text={"(x-2)^2"} />
+          <CardJawaban text={"(x+2)^2"} />
         </div>
       </div>
       <div className="flex w-full lg:w-[1000px] mx-auto flex-row py-2 lg:py-6 border-t-[1px] mt-3 border-[#7a7777]">

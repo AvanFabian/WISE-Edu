@@ -22,21 +22,21 @@ const items = ({ userImage }: ItemsProps) => {
       text: "Belajar",
       icon: belajar,
       url: "/",
-      attribution: "https://www.flaticon.com/free-icons/reading-book",
+      // attribution: "https://www.flaticon.com/free-icons/reading-book",
       rounded: "0",
     },
     {
       text: "Papan Skor",
       icon: trophy,
       url: "/papan-skor",
-      attribution: "https://www.flaticon.com/free-icons/sport-and-competition",
+      // attribution: "https://www.flaticon.com/free-icons/sport-and-competition",
       rounded: "0",
     },
     {
       text: "Pengajar",
       icon: lecturer,
       url: "/daftar-pengajar",
-      attribution: "https://www.flaticon.com/free-icons/teacher",
+      // attribution: "https://www.flaticon.com/free-icons/teacher",
       rounded: "0",
     },
   ];
@@ -46,21 +46,21 @@ const items = ({ userImage }: ItemsProps) => {
       text: "Tantangan",
       icon: mission,
       url: "/tantangan",
-      attribution: "https://www.flaticon.com/free-icons/mission",
+      // attribution: "https://www.flaticon.com/free-icons/mission",
       rounded: "0",
     },
     {
       text: "Akun Kamu",
       icon: userImage,
       url: "/profile-akun",
-      attribution: "https://www.flaticon.com/free-icons/user",
+      // attribution: "https://www.flaticon.com/free-icons/user",
       rounded: "rounded-full",
     },
     {
       text: "Dashboard",
       icon: dashboard,
       url: "/dashboard",
-      attribution: "https://www.flaticon.com/free-icons/user",
+      // attribution: "https://www.flaticon.com/free-icons/user",
       rounded: "rounded-full",
     },
   ];
@@ -82,7 +82,7 @@ const items = ({ userImage }: ItemsProps) => {
                 width={50}
                 height={45}
                 alt="WISE Edu Logo"
-                className={`w-[28px] h-[28px] ${item.rounded} lg:cursor-alias`}
+                className={`w-[28px] h-[28px] ${item.rounded}`}
               />
             <br />
             <span
@@ -110,7 +110,7 @@ const items = ({ userImage }: ItemsProps) => {
                 width={50}
                 height={45}
                 alt="WISE Edu Logo"
-                className={`w-[28px] h-[28px] ${item.rounded} cursor-alias`}
+                className={`w-[28px] h-[28px] ${item.rounded}`}
               />
             <br />
             <span
