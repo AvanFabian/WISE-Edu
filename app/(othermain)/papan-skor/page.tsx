@@ -10,7 +10,7 @@ import {
 
 const page = () => {
   return (
-    <div className="flex mt-9 flex-col w-full w-full lg:w-[630px]">
+    <div className="flex mt-9 flex-col w-full lg:w-[630px]">
       {/* Image tropi */}
       <div className="w-full flex flex-row justify-center">
         <Image
