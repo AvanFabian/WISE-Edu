@@ -28,19 +28,19 @@ const mainpage = () => {
               </h2>
             </div>
             <div className="flex justify-end items-center">
-              <div className="flex flex-row w-max gap-2 cursor-pointer items-center px-2 py-2 h-max bg-transparent border-[3px] border-b-[5px] hover:opacity-75 border-[#49494962] rounded-xl">
-                <Link href="https://www.youtube.com/watch?v=lScgN1qnirY">
+              <Link href="https://www.youtube.com/watch?v=lScgN1qnirY">
+                <div className="flex flex-row w-max gap-2 cursor-pointer items-center px-2 py-2 h-max bg-transparent border-[3px] border-b-[5px] hover:opacity-75 border-[#49494962] rounded-xl">
                   <Image
                     src={panduan}
                     width={30}
                     height={32}
                     alt="WISE Edu Logo"
                   />
-                </Link>
-                <h2 className="text-[#ffffff] lg:text-[14px] text-[12px] font-bold uppercase">
-                  Panduan Belajar
-                </h2>
-              </div>
+                  <h2 className="text-[#ffffff] lg:text-[14px] text-[12px] font-bold uppercase">
+                    Panduan Belajar
+                  </h2>
+                </div>
+              </Link>
             </div>
           </div>
         </div>
@@ -63,19 +63,19 @@ const mainpage = () => {
               </h2>
             </div>
             <div className="flex justify-end items-center">
-              <div className="flex flex-row w-max gap-2 cursor-pointer items-center px-2 py-2 h-max bg-transparent border-[3px] border-b-[5px] hover:opacity-75 border-[#49494962] rounded-xl">
-                <Link href="https://www.youtube.com/watch?v=fj4B6etl8zs">
+              <Link href="https://www.youtube.com/watch?v=fj4B6etl8zs">
+                <div className="flex flex-row w-max gap-2 cursor-pointer items-center px-2 py-2 h-max bg-transparent border-[3px] border-b-[5px] hover:opacity-75 border-[#49494962] rounded-xl">
                   <Image
                     src={panduan}
                     width={30}
                     height={32}
                     alt="WISE Edu Logo"
                   />
-                </Link>
-                <h2 className="text-[#ffffff] lg:text-[14px] text-[12px] font-bold uppercase">
-                  Panduan Belajar
-                </h2>
-              </div>
+                  <h2 className="text-[#ffffff] lg:text-[14px] text-[12px] font-bold uppercase">
+                    Panduan Belajar
+                  </h2>
+                </div>
+              </Link>
             </div>
           </div>
         </div>

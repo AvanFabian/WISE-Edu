@@ -82,11 +82,11 @@ const items = ({ userImage }: ItemsProps) => {
                 width={50}
                 height={45}
                 alt="WISE Edu Logo"
-                className={`w-[35px] ${item.rounded} lg:cursor-alias`}
+                className={`w-[28px] h-[28px] ${item.rounded} lg:cursor-alias`}
               />
             <br />
             <span
-              className={`font-bold text-[17px] ${
+              className={`font-bold text-[16px] ${
                 pathname == item.url ? "text-[#f2f2f2]" : "text-[#777777]"
               }  lg:ml-3 lg:block`}
             >
@@ -110,11 +110,11 @@ const items = ({ userImage }: ItemsProps) => {
                 width={50}
                 height={45}
                 alt="WISE Edu Logo"
-                className={`w-[35px] ${item.rounded} cursor-alias`}
+                className={`w-[28px] h-[28px] ${item.rounded} cursor-alias`}
               />
             <br />
             <span
-              className={`font-bold text-[17px] ${
+              className={`font-bold text-[16px] ${
                 pathname == item.url ? "text-[#f2f2f2]" : "text-[#777777]"
               }  lg:block`}
             >

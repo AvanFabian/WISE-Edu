@@ -48,10 +48,10 @@ const sidebar = () => {
                 width={50}
                 height={45}
                 alt="WISE Edu Logo"
-                className="w-[35px] rounded-full cursor-alias"
+                className="w-[28px] rounded-full cursor-alias"
               />
               <span
-                className={`font-bold text-[17px] lg:ml-3 hidden lg:block text-[#ec4d4d]`}
+                className={`font-bold text-[16px] text-[#ec4d4d]`}
               >
                 Keluar Akun
               </span>
@@ -62,7 +62,7 @@ const sidebar = () => {
           <Link
             href="/api/auth/signin"
             className={`w-full mx-auto flex lg:border-4 lg:border-[#F5ECD7] bg-[#F5ECD7] transition-all duration-600
-            py-2 mb-1 items-center mt-2 gap-5 justify-center rounded-2xl cursor-pointer`}
+            py-2 mb-1 items-center mt-2 gap-2 justify-center rounded-2xl cursor-pointer`}
             onClick={(e) => {
               e.preventDefault();
               signIn("google");
@@ -74,10 +74,10 @@ const sidebar = () => {
               width={50}
               height={45}
               alt="WISE Edu Logo"
-              className="w-[35px] rounded-full cursor-alias"
+              className="w-[28px] rounded-full cursor-alias"
             />
             <span
-              className={`font-bold ml-1 text-[17px] text-[#404240]`}
+              className={`font-bold text-[16px] text-[#777777]`}
             >
               Masuk
             </span>
