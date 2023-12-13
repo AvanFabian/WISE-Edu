@@ -5,7 +5,7 @@ import * as Progress from '@radix-ui/react-progress';
 const ProgressDemo = ({ progressVal }: { progressVal: number }) => {
     return (
         <Progress.Root
-            className="relative overflow-hidden bg-[#8f8080] rounded-full lg:mx-auto w-[85%] h-[25px] my-auto"
+            className="relative overflow-hidden bg-[#8f8080] rounded-full mx-auto w-[85%] h-[16px] lg:h-[25px] my-auto"
             style={{
                 // Fix overflow clipping in Safari
                 // https://gist.github.com/domske/b66047671c780a238b51c51ffde8d3a0
