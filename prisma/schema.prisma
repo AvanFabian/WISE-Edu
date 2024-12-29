@@ -6,7 +6,7 @@ generator client {
 }
 
 datasource db {
-  provider = "mongodb"
+  provider = "mysql"
   url      = env("DATABASE_URL")
 }
 
@@ -22,57 +22,56 @@ enum SubjectType {
   GENERAL
 }
 
-// prisma/schema.prisma
 model User {
-  id                String   @id @default(auto()) @map("_id") @db.ObjectId
-  email             String   @unique 
-  name              String
-  areasOfExpertise  String?  // Only for teachers
-  lastQuizTaken     DateTime? // Only for students
-  quizFrequency     Int?     // Only for students
-  role              UserRole  @default(STUDENT)
+  id               Int        @id @default(autoincrement())
+  email            String     @unique
+  name             String
+  areasOfExpertise String?    // Only for teachers
+  lastQuizTaken    DateTime?  // Only for students
+  quizFrequency    Int?       // Only for students
+  role             UserRole   @default(STUDENT)
   // Relations
-  enrollments       Enrollment[]
-  quizzesCreated    Quiz[]    @relation("QuizCreator")
+  enrollments      Enrollment[]
+  quizzesCreated   Quiz[]     @relation("QuizCreator")
 }
 
 model Subject {
-  id                String   @id @default(auto()) @map("_id") @db.ObjectId
-  name              String
-  type              SubjectType
+  id           Int         @id @default(autoincrement())
+  name         String
+  type         SubjectType
   // Relations
-  subSubjects       SubSubject[]
+  subSubjects  SubSubject[]
 }
 
 model SubSubject {
-  id                String   @id @default(auto()) @map("_id") @db.ObjectId
-  name              String
+  id            Int      @id @default(autoincrement())
+  name          String
   // Relations
-  parentSubject     Subject   @relation(fields: [subjectId], references: [id])
-  subjectId         String    @db.ObjectId
+  parentSubject Subject  @relation(fields: [subjectId], references: [id])
+  subjectId     Int
 }
 
 model Enrollment {
-  id                String   @id @default(auto()) @map("_id") @db.ObjectId
+  id        Int      @id @default(autoincrement())
   // Relations
-  student           User      @relation(fields: [userId], references: [id])
-  userId            String    @db.ObjectId
-  lecture           Lecture   @relation(fields: [lectureId], references: [id])
-  lectureId         String    @db.ObjectId
+  student   User     @relation(fields: [userId], references: [id])
+  userId    Int
+  lecture   Lecture  @relation(fields: [lectureId], references: [id])
+  lectureId Int
 }
 
 model Lecture {
-  id                String   @id @default(auto()) @map("_id") @db.ObjectId
+  id          Int        @id @default(autoincrement())
   // Relations
-  enrollments       Enrollment[]
-  quizzes           Quiz[]
+  enrollments Enrollment[]
+  quizzes     Quiz[]
 }
 
 model Quiz {
-  id                String   @id @default(auto()) @map("_id") @db.ObjectId
+  id         Int      @id @default(autoincrement())
   // Relations
-  createdBy         User      @relation("QuizCreator", fields: [creatorId], references: [id])
-  creatorId         String    @db.ObjectId
-  lecture           Lecture   @relation(fields: [lectureId], references: [id])
-  lectureId         String    @db.ObjectId
+  createdBy  User     @relation("QuizCreator", fields: [creatorId], references: [id])
+  creatorId  Int
+  lecture    Lecture  @relation(fields: [lectureId], references: [id])
+  lectureId  Int
 }

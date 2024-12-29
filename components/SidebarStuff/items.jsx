@@ -9,11 +9,8 @@ import Image from "next/image";
 import Link from "next/link";
 import { useRouter, usePathname } from "next/navigation";
 
-type ItemsProps = {
-  userImage: string;
-};
 
-const items = ({ userImage }: ItemsProps) => {
+const items = ({ userImage }) => {
   const router = useRouter();
   const pathname = usePathname();
 

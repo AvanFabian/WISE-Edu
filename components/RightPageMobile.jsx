@@ -15,7 +15,7 @@ const Rightpage_Akunkamu = dynamic(() => import("@/components/RightPageEachRoute
 const rightpage = () => {
   const pathname = usePathname()
 
-  const routeComponents: any = {
+  const routeComponents = {
     '/': <Rightpage_Home_M />,
     '/papan-skor': <Rightpage_Home_M />,
     '/daftar-pengajar': <Rightpage_Home_M />,

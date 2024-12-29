@@ -9,7 +9,7 @@ import { akunkamu, logout, login } from "@/public/assets/side_icons";
 import { signIn, signOut, useSession } from "next-auth/react";
 
 const SideItems = dynamic(() => import("@/components/SidebarStuff/items"), {
-  ssr: false,
+
 });
 
 const sidebar = () => {
@@ -24,9 +24,9 @@ const sidebar = () => {
         justify="center"
         className="w-full px-2 lg:px-2 text-center"
       >
-        
+
         <span className="hidden lg:block opacity-100 font-bold lg:mb-5 text-[20px] text-[#777777]">
-          Sekolah Menengah <br /> Atas Negeri 1 
+          Sekolah Menengah <br /> Atas Negeri 1
         </span>
         <SideItems userImage={userImage || akunkamu.src} />
         {/* <SideItems /> */}
@@ -86,12 +86,12 @@ const sidebar = () => {
         )}
       </Flex>
       <Image
-          src={SchEducation}
-          width={125}
-          height={55}
-          className="hidden absolute left-9 opacity-30 lg:flex mx-auto align-bottom"
-          alt="WISE Edu Logo"
-        />
+        src={SchEducation}
+        width={125}
+        height={55}
+        className="hidden absolute left-9 opacity-30 lg:flex mx-auto align-bottom"
+        alt="WISE Edu Logo"
+      />
       {/* <div className="flex w-full">
         <Image
           src={SchEducation}

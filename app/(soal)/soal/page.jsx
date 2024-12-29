@@ -9,14 +9,14 @@ import {
 const ProgressBar = dynamic(
   () => import("@/components/MainpageStuff/ProgressBar"),
   {
-    ssr: false,
+
   }
 );
 
 const CardJawaban = dynamic(
   () => import("@/components/MainpageStuff/CardJawaban"),
   {
-    ssr: false,
+
   }
 );
 
@@ -29,7 +29,7 @@ const page = () => {
       <div className="flex flex-col mt-8 gap-3 w-full text-center">
         <div className="flex mx-auto flex-row w-[85%] lg:w-[1000px]">
           <h2 className="text-[#414040] text-sm lg:text-base mr-auto font-bold subpixel-antialiased capitalize">
-            Soal 
+            Soal
           </h2>
         </div>
         <div className="flex flex-col mx-auto w-[85%] lg:w-[1000px] bg-[#ebe2cd] border-[3px] border-[#c4bfbf62] rounded-2xl">
@@ -60,7 +60,7 @@ const page = () => {
         <div className="w-full flex justify-start">
           <button
             className="flex w-[150px] mx-auto lg:w-[200px] transition-all duration-150 bg-[#8B6B61] hover:bg-[#d6aa9d] px-1 lg:px-2 py-2 lg:py-3 justify-center rounded-2xl border-b-4 border-[#020202] shadow-2xl"
-            // onClick={() => main()}>
+          // onClick={() => main()}>
           >
             <p className="text-[13px] lg:text-[15px] font-bold text-white uppercase">
               Kembali
@@ -70,7 +70,7 @@ const page = () => {
         <div className="w-full flex justify-end">
           <button
             className="flex w-[150px] mx-auto lg:w-[200px] transition-all duration-150 bg-[#8B6B61] hover:bg-[#d6aa9d] px-1 lg:px-2 py-2 lg:py-3 justify-center rounded-2xl border-b-4 border-[#020202] shadow-2xl"
-            // onClick={() => main()}>
+          // onClick={() => main()}>
           >
             <p className="text-[13px] lg:text-[15px] font-bold text-white uppercase">
               Selanjutnya

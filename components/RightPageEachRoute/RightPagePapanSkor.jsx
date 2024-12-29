@@ -6,13 +6,13 @@ import { Kompetisi } from "@/public/assets/papanskor_icons";
 const TopMenu = dynamic(
   () => import("@/components/RightPageEachRoute/TopMenu"),
   {
-    ssr: false,
+
   }
 );
 const FooterText = dynamic(
   () => import("@/components/RightPageEachRoute/FooterText"),
   {
-    ssr: false,
+
   }
 );
 

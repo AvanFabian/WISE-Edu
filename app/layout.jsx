@@ -1,17 +1,14 @@
-import type { Metadata } from "next";
 import "./globals.css";
 import SessionProvider from '@/app/context/SessionProvider';
 import { getServerSession } from "next-auth";
-export const metadata: Metadata = {
+export const metadata = {
   title: "SchEducation",
   description:
     "Terobosan baru sekolah-sekolah dalam memfasilitasi siswa-siswinya untuk belajar secara mandiri, berkesinambungan, dan terkontrol.",
 };
 
 export default async function RootLayout({
-  children,
-}: {
-  children: React.ReactNode;
+  children
 }) {
   const session = await getServerSession();
 

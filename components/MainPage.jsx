@@ -4,10 +4,10 @@ import Image from "next/image";
 import panduan from "@/public/assets/panduan.png";
 import Link from "next/link";
 
-const ButtonGroup: any = dynamic(
+const ButtonGroup = dynamic(
   () => import("@/components/MainpageStuff/ButtonGroup"),
   {
-    ssr: false,
+
   }
 );
 

@@ -3,16 +3,16 @@ import dynamic from "next/dynamic";
 
 
 const SideBar = dynamic(() => import("@/components/Sidebar"), {
-  ssr: false,
+
 });
-const SideBarMobile = dynamic(() => import("@/components/SidebarM"), {
-  ssr: false,
+const SidebarMobileobile = dynamic(() => import("@/components/SidebarMobile"), {
+
 });
 const RightPage = dynamic(() => import("@/components/RightPage"), {
-  ssr: false,
+
 });
-const RightPageM = dynamic(() => import("@/components/RightPageM"), {
-  ssr: false,
+const RightPageMobile = dynamic(() => import("@/components/RightPageMobile"), {
+
 });
 
 export default function OtherMainLayout({
@@ -40,7 +40,7 @@ export default function OtherMainLayout({
       </div>
       <div className="flex flex-col gap-3 max-w-full min-h-screen md:hidden">
         <div className="bg-[#F5ECD7]">
-          <RightPageM />
+          <RightPageMobile />
         </div>
         {/* <div className="row-span-1 bg-[#F5ECD7] border-r-[1px] border-[#5e5e5e]"></div> */}
 
@@ -51,10 +51,10 @@ export default function OtherMainLayout({
         </div>
 
         <div className="sticky top-0 p-3 bg-[#F5ECD7] max-w-full">
-          <SideBarMobile />
+          <SidebarMobileobile />
         </div>
       </div>
     </main>
-  
+
   );
 }

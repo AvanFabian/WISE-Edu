@@ -2,7 +2,7 @@
 import React from 'react';
 import * as Progress from '@radix-ui/react-progress';
 
-const ProgressDemo = ({ progressVal }: { progressVal: number }) => {
+const ProgressDemo = ({ progressVal }) => {
     return (
         <Progress.Root
             className="relative overflow-hidden bg-[#8f8080] rounded-full w-full h-[25px] my-auto"

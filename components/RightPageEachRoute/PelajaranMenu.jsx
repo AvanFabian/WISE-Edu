@@ -4,12 +4,7 @@ import Image from "next/image";
 import { StaticImageData } from "next/image";
 import { type } from "os";
 
-type Mapel = {
-  icon: StaticImageData;
-  mapel: string;
-};
-
-const HoveringCard = ({ mapel }: { mapel: Mapel[] }) => (
+const HoveringCard = ({ mapel }) => (
   (
     <HoverCard.Root>
       <HoverCard.Trigger asChild>

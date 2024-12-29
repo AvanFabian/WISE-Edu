@@ -8,20 +8,20 @@ import { fire } from "@/public/assets/tantangan_icons";
 const TantanganBanner = dynamic(
   () => import("@/components/TantanganStuff/TantanganBanner"),
   {
-    ssr: false,
+
   }
 );
 
 const ProgressBar = dynamic(
   () => import("@/components/MainpageStuff/ProgressBar"),
   {
-    ssr: false,
+
   }
 );
 
 const page = () => {
 
-   const [progressVal, setProgressVal] = React.useState(0);
+  const [progressVal, setProgressVal] = React.useState(0);
 
   return (
     <div className="flex flex-col items-end w-full lg:w-[630px] gap-9 lg:gap-8">
@@ -37,7 +37,7 @@ const page = () => {
         </div>
         <div className="w-full p-4 mb-9 flex flex-row border-2 bg-[#ebe2cd] border-[#c4bfbf62] rounded-2xl">
           <div className="flex basis-1/6">
-            <Image 
+            <Image
               src={fire}
               width={100}
               height={100}
@@ -46,7 +46,7 @@ const page = () => {
           </div>
           <div className="flex basis-5/6">
             <div className="w-full ml-5 flex flex-col align-middle">
-              
+
               <h2 className="text-[#414040] text-xs lg:text-sm font-bold my-auto">Selesaikan 5 Soal Aljabar Berikut</h2>
               <div className='w-full flex flex-row'>
                 <ProgressBar progressVal={progressVal} />
@@ -57,7 +57,7 @@ const page = () => {
         </div>
       </div>
     </div>
-    
+
   );
 };
 

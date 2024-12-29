@@ -11,10 +11,10 @@ import { UserRight2 } from "@/public/assets/akunkamu_icons";
 import Link from "next/link";
 
 const TopMenu = dynamic(() => import("@/components/RightPageEachRoute/TopMenu"), {
-  ssr: false,
+
 });
 const FooterText = dynamic(() => import("@/components/RightPageEachRoute/FooterText"), {
-  ssr: false,
+
 });
 
 const Rightpage_home = () => {
@@ -45,7 +45,7 @@ const Rightpage_home = () => {
         </div>
         {/* map FooterText */}
         <div className="hidden lg:block">
-        <FooterText />
+          <FooterText />
 
         </div>
       </div>

@@ -8,7 +8,7 @@ import {
 const TopMenu = dynamic(
   () => import("@/components/RightPageEachRoute/TopMenu"),
   {
-    ssr: false,
+
   }
 );
 

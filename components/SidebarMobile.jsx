@@ -8,8 +8,8 @@ import Link from "next/link";
 import { akunkamu, logout, login } from "@/public/assets/side_icons";
 import { signIn, signOut, useSession } from "next-auth/react";
 
-const SideItemsM = dynamic(() => import("@/components/SidebarStuff/itemsM"), {
-  ssr: false,
+const SideItemsM = dynamic(() => import("@/components/SidebarStuff/itemsMobile"), {
+
 });
 
 const sidebar = () => {
@@ -24,9 +24,9 @@ const sidebar = () => {
         justify="center"
         className="w-full px-2 text-center"
       >
-        
+
         <span className="hidden lg:block opacity-100 font-bold lg:mb-5 text-[20px] text-[#777777]">
-          Sekolah Menengah <br /> Atas Negeri 1 
+          Sekolah Menengah <br /> Atas Negeri 1
         </span>
         <SideItemsM userImage={userImage || akunkamu.src} />
         {/* <SideItems /> */}
@@ -86,12 +86,12 @@ const sidebar = () => {
         )}
       </Flex>
       <Image
-          src={SchEducation}
-          width={125}
-          height={55}
-          className="hidden absolute bottom-2 left-9 opacity-30 lg:flex mx-auto align-bottom"
-          alt="WISE Edu Logo"
-        />
+        src={SchEducation}
+        width={125}
+        height={55}
+        className="hidden absolute bottom-2 left-9 opacity-30 lg:flex mx-auto align-bottom"
+        alt="WISE Edu Logo"
+      />
     </div>
   );
 };

@@ -3,10 +3,10 @@ import dynamic from "next/dynamic";
 
 
 const PengajarCard = dynamic(() => import("@/components/PengajarStuff/PengajarCard"), {
-  ssr: false,
+
 });
 const PengajarBanner = dynamic(() => import("@/components/PengajarStuff/PengajarBanner"), {
-  ssr: false,
+
 });
 
 const TeacherProperty = [
