@@ -8,9 +8,7 @@ const RightPage = dynamic(() => import("../../components/RightPage"), {
 });
 
 export default function OtherMainLayout({
-  children,
-}: {
-  children: React.ReactNode;
+  children
 }) {
   return (
     <div className="grid grid-cols-12 max-w-full min-h-screen">

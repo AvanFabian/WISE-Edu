@@ -16,9 +16,7 @@ const RightPageM = dynamic(() => import("@/components/RightPageM"), {
 });
 
 export default function OtherMainLayout({
-  children,
-}: {
-  children: React.ReactNode;
+  children
 }) {
   return (
     <main className="min-h-screen bg-[#F5ECD7]">
