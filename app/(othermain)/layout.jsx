@@ -20,37 +20,38 @@ export default function OtherMainLayout({
 }) {
   return (
     <main className="min-h-screen bg-[#F5ECD7]">
-      <div className="hidden min-w-screen min-h-screen md:grid md:grid-cols-12 lg:grid lg:grid-cols-12 lg:max-w-full lg:min-h-screen">
-        <div className="bg-[#F5ECD7] col-span-2 w-[67.5%] lg:w-max lg:h-full border-r-[2px] pr-2 border-[#c6c3c3] lg:border-none lg:fixed">
-          {/* <div className="bg-[#F5ECD7] fixed"> */}
+      {/* For larger screens (desktop layout) */}
+      <div className="hidden md:grid lg:grid grid-cols-12 lg:grid-cols-12 lg:max-w-full lg:min-h-screen">
+        {/* Left Sidebar */}
+        <div className="bg-[#F5ECD7] col-span-2 flex flex-col justify-start items-center border-r-[2px] border-[#c6c3c3]">
           <SideBar />
         </div>
-        {/* <div className="hidden lg:col-span-2 lg:bg-[#F5ECD7] lg:border-r-[1px] lg:border-[#5e5e5e]"></div> */}
-        <div className="hidden lg:block lg:col-span-2 lg:bg-[#F5ECD7] lg:border-r-[1px] lg:border-[#5e5e5e]"></div>
 
-        <div className="col-span-6 pl-2 lg:pr-0 lg:col-span-6 bg-[#F5ECD7]">
-          <div className="w-full flex justify-end">
-            {children}
-          </div>
+        {/* Main Content */}
+        <div className="bg-[#F5ECD7] col-span-6 flex flex-col justify-start items-center">
+        {children}
         </div>
 
-        <div className="col-span-4 lg:sticky top-0 right-0 pl-8 bg-[#F5ECD7] max-w-full">
+        {/* Right Sidebar */}
+        <div className="bg-[#F5ECD7] col-span-4 flex flex-col justify-start items-center">
           <RightPage />
         </div>
       </div>
+
+      {/* For smaller screens (mobile layout) */}
       <div className="flex flex-col gap-3 max-w-full min-h-screen md:hidden">
+        {/* Right Sidebar for Mobile */}
         <div className="bg-[#F5ECD7]">
           <RightPageMobile />
         </div>
-        {/* <div className="row-span-1 bg-[#F5ECD7] border-r-[1px] border-[#5e5e5e]"></div> */}
 
+        {/* Main Content for Mobile */}
         <div className="bg-[#F5ECD7]">
-          <div className="w-full flex justify-end">
-            {children}
-          </div>
+          {children}
         </div>
 
-        <div className="sticky top-0 p-3 bg-[#F5ECD7] max-w-full">
+        {/* Left Sidebar for Mobile */}
+        <div className="bg-[#F5ECD7]">
           <SidebarMobileobile />
         </div>
       </div>
