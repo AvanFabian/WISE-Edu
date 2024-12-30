@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 import dynamic from "next/dynamic";
 import Image from "next/image";
 import panduan from "@/public/assets/panduan.png";
