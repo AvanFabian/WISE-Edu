@@ -37,10 +37,10 @@ const page = () => {
       </div>
       {/* Judul + subjudul */}
       <div className="w-full flex flex-col text-center mt-8">
-        <span className="text-base lg:text-lg text-[#1d1d1d] font-bold mb-3">
+        <span className="text-base lg:text-2xl text-[#1d1d1d] font-bold mb-3">
           Lihat Detail Papan Skor!
         </span>
-        <span className="text-xs lg:text-sm text-[#414040] font-normal">
+        <span className="text-base lg:text-lg text-[#414040] font-normal">
           Selesaikan Latihan Soal sebanyak-banyaknya <br /> untuk meningkatkan
           peringkatmu!
         </span>
@@ -68,14 +68,14 @@ const page = () => {
           {/* nama + kelas */}
           <div className="flex flex-row ml-5 w-full">
             <div className="flex w-full justify-start ">
-              <span className="text-xs lg:text-sm font-medium text-[#414040] ml-2 justify-end my-auto">
+              <span className="text-base lg:text-lg font-medium text-[#414040] ml-2 justify-end my-auto">
                 John Doe&nbsp;|&nbsp;XII IPA 1
               </span>
             </div>
             <div className="flex w-full justify-end">
-                <span className="text-xs lg:text-sm font-normal text-[#414040] ml-2 justify-end my-auto">
-                  8 / 10 Soal
-                </span>
+              <span className="text-base lg:text-lg font-normal text-[#414040] ml-2 justify-end my-auto">
+                8 / 10 Soal
+              </span>
             </div>
           </div>
         </div>

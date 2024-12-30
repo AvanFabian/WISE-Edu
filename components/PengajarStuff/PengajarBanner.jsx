@@ -7,10 +7,10 @@ const PengajarBanner = () => {
     <div className="hidden lg:flex flex-col relative w-full bg-gradient-to-l from-[#b88575] to-[#977f77] mt-4 py-14 px-4 rounded-xl shadow-xl">
       <div className="flex flex-row w-full">
         <div className="flex flex-col align-middle my-auto basis-4/6">
-          <h1 className="text-[#e7e7e7] text-md font-bold mb-2 capitalize subpixel-antialiased">
+          <h1 className="text-[#e7e7e7] text-2xl font-extrabold mb-2 capitalize subpixel-antialiased">
             Daftar Pengajar
           </h1>
-          <h2 className="text-[#e7e7e7] text-xs font-normal subpixel-antialiased capitalize">
+          <h2 className="text-[#e7e7e7] text-xs lg:text-lg font-normal subpixel-antialiased capitalize">
             Pengajar Sekolah <br /> yang terdaftar di WISE
           </h2>
         </div>

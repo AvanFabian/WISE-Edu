@@ -8,10 +8,10 @@ const PengajarBanner = () => {
     <div className="relative w-[85%] mx-auto lg:w-full bg-gradient-to-l from-[#b88575] to-[#977f77] mt-4 py-9 lg:py-14 px-4 rounded-xl shadow-xl">
       <div className="flex flex-row w-full">
         <div className="flex flex-col align-middle my-auto basis-4/6">
-          <h1 className="text-[#e7e7e7] text-xs lg:text-base font-bold mb-2 capitalize subpixel-antialiased">
+          <h1 className="text-[#e7e7e7] text-base md:text-2xl font-extrabold mb-2 capitalize subpixel-antialiased">
             Selamat Datang di Tantangan
           </h1>
-          <h2 className="text-[#e7e7e7] text-[14px] lg:text-xs font-normal subpixel-antialiased capitalize">
+          <h2 className="text-[#e7e7e7] text-xs md:text-lg font-normal subpixel-antialiased capitalize">
             Dapatkan Achievement <br /> dengan menyelesaikan 
           </h2>
         </div>

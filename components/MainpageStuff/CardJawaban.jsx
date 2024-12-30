@@ -1,11 +1,8 @@
 import { type } from "os";
 import React from "react";
 
-type CardJawabanProps = {
-    text: string;
-    };
 
-const CardJawaban = ({ text }: CardJawabanProps) => {
+const CardJawaban = ({ text }) => {
   return (
     <div className="flex mx-auto lg:mx-2 flex-col w-[85%] lg:w-[225px] hover:bg-[#ada99e] cursor-pointer bg-[#ebe2cd] border-[3px] border-[#c4bfbf62] rounded-2xl">
       <div className="ml-1 mt-1 p-1">

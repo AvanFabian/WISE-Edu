@@ -17,7 +17,7 @@ const PengajarCard = ({ item }) => {
         <div className="flex flex-col my-auto gap-3">
           <div className="flex flex-col gap-2">
             <div className="w-full text-center">
-              <span className="text-[#414040] text-sm font-bold subpixel-antialiased capitalize">
+              <span className="text-[#414040] text-base md:text-2xl font-extrabold subpixel-antialiased capitalize">
                 {item.nama}
               </span>
             </div>
@@ -25,7 +25,7 @@ const PengajarCard = ({ item }) => {
               <div className="grid grid-cols-2 justify-center gap-1 mt-1">
                 {item.mata_pelajaran.map((item, index) => (
                   <div className="flex transition-all duration-150 bg-[#8B6B61] shadow-md lg:shadow-xl px-2 py-2 rounded-2xl cursor-pointer">
-                    <span key={index} className="text-[#f2f2f2] mx-auto text-xs font-semibold subpixel-antialiased capitalize">
+                    <span key={index} className="text-[#f2f2f2] mx-auto text-xs lg:text-lg font-semibold subpixel-antialiased capitalize">
                       {item}
                     </span>
                   </div>

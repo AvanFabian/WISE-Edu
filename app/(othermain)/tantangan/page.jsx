@@ -29,10 +29,10 @@ const page = () => {
       <div className="relative flex flex-col w-[85%] mx-auto">
         <div className="w-full flex flex-row mb-2 ">
           <div className="w-full">
-            <h2 className="text-[#414040] text-base font-bold">Tantangan Harian</h2>
+            <h2 className="text-[#414040] text-base md:text-2xl font-bold">Tantangan Harian</h2>
           </div>
           <div className="w-full text-end">
-            <h2 className="text-[#414040] text-base font-bold">Semangat!</h2>
+            <h2 className="text-[#414040] text-base md:text-2xl font-extrabold">Semangat!</h2>
           </div>
         </div>
         <div className="w-full p-4 mb-9 flex flex-row border-2 bg-[#ebe2cd] border-[#c4bfbf62] rounded-2xl">
@@ -47,7 +47,7 @@ const page = () => {
           <div className="flex basis-5/6">
             <div className="w-full ml-5 flex flex-col align-middle">
 
-              <h2 className="text-[#414040] text-xs lg:text-sm font-bold my-auto">Selesaikan 5 Soal Aljabar Berikut</h2>
+              <h2 className="text-[#414040] text-base md:text-xl font-bold my-auto">Selesaikan 5 Soal Aljabar Berikut</h2>
               <div className='w-full flex flex-row'>
                 <ProgressBar progressVal={progressVal} />
                 <span className='text-[#414040] text-xs lg:text-sm font-normal'>100%</span>
