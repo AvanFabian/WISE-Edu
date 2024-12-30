@@ -65,7 +65,7 @@ const page = () => {
               className="rounded-full"
             />
           </div>
-          {/* nama + kelas */}
+        {/* nama + kelas */}
           <div className="flex flex-row ml-5 w-full">
             <div className="flex w-full justify-start ">
               <span className="text-base lg:text-lg font-medium text-[#414040] ml-2 justify-end my-auto">
