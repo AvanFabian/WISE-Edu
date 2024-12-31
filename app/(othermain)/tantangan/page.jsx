@@ -48,9 +48,8 @@ const page = () => {
             <div className="w-full ml-5 flex flex-col align-middle">
 
               <h2 className="text-[#414040] text-base md:text-xl font-bold my-auto">Selesaikan 5 Soal Aljabar Berikut</h2>
-              <div className='w-full flex flex-row'>
+              <div className='w-full flex flex-col'>
                 <ProgressBar progressVal={progressVal} />
-                <span className='text-[#414040] text-xs lg:text-sm font-normal'>100%</span>
               </div>
             </div>
           </div>

@@ -1,9 +1,9 @@
 const { PrismaClient } = require('@prisma/client');
-const prisma = new PrismaClient();
+import prisma from '@/app/lib/prismadb.js'
 
 async function main() {
-  // Loop through 9 levels
   for (let levelNumber = 1; levelNumber <= 9; levelNumber++) {
+    // Create level
     const level = await prisma.level.create({
       data: {
         number: levelNumber,
@@ -11,22 +11,22 @@ async function main() {
       },
     });
 
-    // Add 5 questions for each level
+    // Create questions for each level
     for (let questionNumber = 1; questionNumber <= 5; questionNumber++) {
       const question = await prisma.question.create({
         data: {
           content: `Question ${questionNumber} for Level ${levelNumber}`,
-          levelId: level.id,
+          level: { connect: { id: level.id } }, // Connect question to the level
         },
       });
 
-      // Add 4 answers for each question, marking one as correct
+      // Create answers for each question
       for (let answerNumber = 1; answerNumber <= 4; answerNumber++) {
         await prisma.answer.create({
           data: {
             content: `Answer ${answerNumber} for Question ${questionNumber}`,
             isCorrect: answerNumber === 1, // Mark the first answer as correct
-            questionId: question.id,
+            question: { connect: { id: question.id } }, // Connect answer to the question
           },
         });
       }

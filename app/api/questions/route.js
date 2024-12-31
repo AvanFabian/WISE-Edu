@@ -1,6 +1,6 @@
 import { PrismaClient } from '@prisma/client';
 
-const prisma = new PrismaClient();
+import prisma from '@/app/lib/prismadb.js'
 
 export async function GET(req) {
     const url = new URL(req.url);

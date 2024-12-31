@@ -1,16 +1,23 @@
-// Remove or comment out the TypeScript import
-// import { NextAuthOptions } from 'next-auth';
 import GoogleProvider from 'next-auth/providers/google';
-// Define authOptions without type annotations
-export const authOptions = {
-  // Secret for NextAuth; without this, JWT encryption/decryption won't work
-  secret: process.env.NEXTAUTH_SECRET,
+import { PrismaAdapter } from '@next-auth/prisma-adapter';
+import { PrismaClient } from '@prisma/client';
 
-  // Configure one or more authentication providers
+import prisma from '@/app/lib/prismadb.js'
+
+export const authOptions = {
+  secret: process.env.NEXTAUTH_SECRET,
+  adapter: PrismaAdapter(prisma), // Use PrismaAdapter for storing user info in the database
   providers: [
     GoogleProvider({
       clientId: process.env.GOOGLE_CLIENT_ID,
       clientSecret: process.env.GOOGLE_CLIENT_SECRET,
     }),
   ],
+  callbacks: {
+    async session({ session, user }) {
+      // Add user ID to the session
+      session.user.id = user.id;
+      return session;
+    },
+  },
 };

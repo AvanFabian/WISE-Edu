@@ -45,7 +45,6 @@ const ButtonGroup = () => {
       .then((data) => setLevels(data));
   }, []);
 
-  // Define the corresponding image for each level
   const levelImages = [
     Onlinelearning,
     null,
@@ -70,7 +69,6 @@ const ButtonGroup = () => {
               : 'items-center'
             } flex flex-col`}
         >
-          {/* Adjusted z-index for buttons */}
           <div className="z-30">
             {level.status ? (
               <UnlockedButton levelNumber={level.number} />
@@ -79,7 +77,6 @@ const ButtonGroup = () => {
             )}
           </div>
 
-          {/* Adjusted z-index for images */}
           {levelImages[index] && (
             <Image
               src={levelImages[index]}

@@ -1,13 +1,23 @@
 import { PrismaClient } from '@prisma/client';
+import { getServerSession } from 'next-auth/next';
+import { authOptions } from '@/app/lib/auth';
 
-const prisma = new PrismaClient();
+import prisma from '@/app/lib/prismadb.js'
 
 export async function POST(req) {
-  const { questionId, answerId, isCorrect } = await req.json();
+  const session = await getServerSession(authOptions);
+
+  if (!session) {
+    return new Response('Unauthorized', { status: 401 });
+  }
+
+  const { questionId, answerId, isCorrect, levelNumber } = await req.json();
 
   try {
     const storedAnswer = await prisma.progress.create({
       data: {
+        userId: session.user.id, // Use the user ID from the session
+        levelId: levelNumber,
         questionId,
         answerId,
         isCorrect,
