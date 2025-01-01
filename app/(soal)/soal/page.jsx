@@ -2,6 +2,7 @@
 import React, { useEffect, useState } from 'react';
 import { useSearchParams, useRouter } from 'next/navigation';
 import dynamic from 'next/dynamic';
+import { useSession } from "next-auth/react";
 
 const ProgressBar = dynamic(() => import('@/components/MainpageStuff/ProgressBar'), {});
 
@@ -15,20 +16,30 @@ const SoalPage = () => {
   const [quizCompleted, setQuizCompleted] = useState(false);
   const [startTime, setStartTime] = useState(null);
   const [endTime, setEndTime] = useState(null);
+  const { data: session, status } = useSession();
 
   useEffect(() => {
     if (levelNumber) {
       fetch(`/api/questions?level=${levelNumber}`)
         .then((response) => response.json())
+        .then((data) => setQuestions(data));
+  
+      fetch(`/api/progress?level=${levelNumber}&userId=${session.user.id}`)
+        .then((response) => response.json())
         .then((data) => {
-          setQuestions(data);
-          setCurrentQuestionIndex(0);
-          setAnsweredQuestions({});
-          setQuizCompleted(false);
-          setStartTime(Date.now());
+          setAnsweredQuestions(
+            data.reduce((acc, curr) => {
+              acc[curr.questionId] = {
+                selectedAnswerId: curr.answerId,
+                isCorrect: curr.isCorrect,
+              };
+              return acc;
+            }, {})
+          );
         });
     }
   }, [levelNumber]);
+  
 
   const currentQuestion = questions[currentQuestionIndex];
 
@@ -52,12 +63,24 @@ const SoalPage = () => {
       }),
     }).catch((error) => console.error('Error saving progress:', error));
   
+    // If all questions are answered, complete the quiz
     if (Object.keys(answeredQuestions).length + 1 === questions.length) {
       setQuizCompleted(true);
       setEndTime(Date.now());
+  
+      // Call handleQuizCompletion
+      fetch('/api/levels/unlock', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          userId: session.user.id,
+          levelNumber: parseInt(levelNumber, 10),
+        }),
+      }).catch((error) => console.error('Error unlocking level:', error));
     }
   };
   
+
 
   const handleNext = () => {
     if (currentQuestionIndex < questions.length - 1) {

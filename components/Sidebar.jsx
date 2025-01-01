@@ -30,14 +30,14 @@ const sidebar = () => {
         {session?.user && status === "authenticated" && (
           <Link
             href="api/auth/signout"
-            className={`w-full ml-1 lg:ml-0 lg:px-7 lg:first-letter flex lg:border-4 lg:border-[#F5ECD7] bg-[#F5ECD7] transition-all duration-600
-            py-2 mb-1 lg:mb-4 gap-1 justify-center lg:justify-start lg:items-center rounded-2xl cursor-pointer`}
+            className={`w-full ml-1 lg:ml-0 lg:px-7 flex lg:border-4 lg:border-[#F5ECD7] bg-[#F5ECD7] transition-all duration-600
+      py-2 mb-1 lg:mb-4 gap-1 justify-center lg:justify-start lg:items-center rounded-2xl cursor-pointer`}
             onClick={(e) => {
               e.preventDefault();
               signOut();
             }}
           >
-            <div>
+            <div className="flex items-center">
               <Image
                 src={logout}
                 width={50}
@@ -46,7 +46,7 @@ const sidebar = () => {
                 className="w-[35px] rounded-full cursor-alias"
               />
               <span
-                className={`font-bold text-[17px] lg:ml-3 hidden lg:block text-[#ec4d4d]`}
+                className={`font-bold text-[17px] lg:ml-3 text-[#ec4d4d]`}
               >
                 Keluar
               </span>
@@ -56,28 +56,31 @@ const sidebar = () => {
         {!session?.user && status === "unauthenticated" && (
           <Link
             href="/api/auth/signin"
-            className={`w-full ml-1 lg:ml-0 lg:px-5 lg:first-letter flex lg:border-4 lg:border-[#F5ECD7] bg-[#F5ECD7] transition-all duration-600
-            py-2 mb-1 lg:mb-4 gap-1 justify-center lg:justify-start lg:items-center rounded-2xl cursor-pointer`}
+            className={`w-full ml-1 lg:ml-0 lg:px-5 flex lg:border-4 lg:border-[#F5ECD7] bg-[#F5ECD7] transition-all duration-600
+      py-2 mb-1 lg:mb-4 gap-1 justify-center lg:justify-start lg:items-center rounded-2xl cursor-pointer`}
             onClick={(e) => {
               e.preventDefault();
               signIn("google");
             }}
           >
-            <Image
-              src={login}
-              width={50}
-              height={45}
-              alt="WISE Edu Logo"
-              className="w-[35px] rounded-full cursor-alias"
-            />
-            <span
-              className={`font-bold text-[17px] lg:ml-3 hidden lg:block text-[#404240]`}
-            >
-              Masuk
-            </span>
+            <div className="flex items-center">
+              <Image
+                src={login}
+                width={50}
+                height={45}
+                alt="WISE Edu Logo"
+                className="w-[35px] rounded-full cursor-alias"
+              />
+              <span
+                className={`font-bold text-[17px] lg:ml-3 text-[#404240]`}
+              >
+                Masuk
+              </span>
+            </div>
           </Link>
         )}
       </div>
+
 
       {/* School logo */}
       <Image

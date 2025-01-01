@@ -1,5 +1,6 @@
 'use client';
 import React, { useEffect, useState } from 'react';
+import { useRouter } from 'next/navigation'
 import Image from 'next/image';
 import Link from 'next/link';
 import {
@@ -37,13 +38,20 @@ const LockedButton = () => (
 
 const ButtonGroup = () => {
   const [levels, setLevels] = useState([]);
+  const router = useRouter();
 
   // Fetch levels from API
   useEffect(() => {
-    fetch('/api/levels')
-      .then((response) => response.json())
-      .then((data) => setLevels(data));
-  }, []);
+    const fetchLevels = async () => {
+      const response = await fetch('/api/levels', { cache: 'no-store' });
+      const data = await response.json();
+      setLevels(data);
+    };
+  
+    fetchLevels();
+  }, [router.asPath]); // Ensures updated fetch when route changes
+  
+
 
   const levelImages = [
     Onlinelearning,
