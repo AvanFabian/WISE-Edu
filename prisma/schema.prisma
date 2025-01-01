@@ -67,12 +67,14 @@ model User {
   name        String?    // User's name
   email       String?    @unique // User's email
   image       String?    // User's profile image
+  emailVerified DateTime? // To track email verification status
   createdAt   DateTime   @default(now())
   updatedAt   DateTime   @updatedAt
   progress    Progress[] // Relation to progress
   accounts    Account[]  // Relation to accounts
   sessions    Session[]  // Relation to sessions
 }
+
 
 // NextAuth: Account model
 model Account {
