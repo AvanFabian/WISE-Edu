@@ -11,12 +11,12 @@ const PengajarBanner = dynamic(() => import("@/components/PengajarStuff/Pengajar
 
 const TeacherProperty = [
   {
-    nama: "Uzumaki Naruto",
-    mata_pelajaran: ["matematika", "fisika", "kimia"],
+    nama: "John Doe",
+    mata_pelajaran: ["Math", "Physics", "Chem"],
   },
   {
-    nama: "Monkey D. Luffy",
-    mata_pelajaran: ["matematika", "fisika", "kimia"],
+    nama: "Richard Lee",
+    mata_pelajaran: ["Math", "Physics", "Chem"],
   },
 ];
 

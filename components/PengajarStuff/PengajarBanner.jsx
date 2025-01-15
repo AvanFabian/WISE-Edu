@@ -11,7 +11,7 @@ const PengajarBanner = () => {
             Daftar Pengajar
           </h1>
           <h2 className="text-[#e7e7e7] text-xs lg:text-lg font-normal subpixel-antialiased capitalize">
-            Pengajar Sekolah <br /> yang terdaftar di WISE
+            Pengajar Sekolah <br /> yang terdaftar di VLE
           </h2>
         </div>
         <div className="flex justify-end items-center basis-2/6">
