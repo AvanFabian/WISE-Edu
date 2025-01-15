@@ -1,36 +1,41 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# SchEducation : Online Learning Platform
 
-## Getting Started
+## 📋 <a name="table">Table of Contents</a>
 
-First, run the development server:
+1. ⚙️ [Tech Stack](#tech-stack)
+2. 🔗 [Pages](#pages)
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## <a name="tech-stack">⚙️ Tech Stack</a>
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- Next.js
+- Prisma
+- MySQL
+- Tailwind
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## <a name="pages">🤸 Pages</a>
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+| Landing Page                                                                                                  
+| -----------------------------------------------------------------------------
+| <img src="https://github.com/AvanFabian/SchEducation/blob/main/public/assets/github_readme/1.png" width="1080" />
 
-## Learn More
+| Quiz Page                                                        
+| ----------------------------------------------------------------------------- 
+| <img src="https://github.com/AvanFabian/SchEducation/blob/main/public/assets/github_readme/2.png" width="1080" />
 
-To learn more about Next.js, take a look at the following resources:
+| Achievement Page                                                                
+| -----------------------------------------------------------------------------
+| <img src="https://github.com/AvanFabian/SchEducation/blob/main/public/assets/github_readme/3.png" width="1080" />
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+| Teacher Page                                                              
+| ----------------------------------------------------------------------------- 
+| <img src="https://github.com/AvanFabian/SchEducation/blob/main/public/assets/github_readme/4.png" width="1080" />
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+| Challenge Page                                                           
+| ----------------------------------------------------------------------------- 
+| <img src="https://github.com/AvanFabian/SchEducation/blob/main/public/assets/github_readme/5.png" width="1080" />
 
-## Deploy on Vercel
+| User Page                                                              
+| ----------------------------------------------------------------------------- 
+| <img src="https://github.com/AvanFabian/SchEducation/blob/main/public/assets/github_readme/6.png" width="1080" />
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
